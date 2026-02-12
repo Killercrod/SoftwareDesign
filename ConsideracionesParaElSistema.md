@@ -49,4 +49,14 @@ Carga de leads provenientes de ferias, convenios institucionales o bases de dato
 ---
 
 ### 4. Correo Institucional o Contacto Directo
-El interesado se comunica por correo
+El interesado escribe o llama, y el personal registra el lead manualmente.
+Ventajas: cero transferencia de datos a terceros, alto control y trazabilidad.
+
+---
+
+### 5. APIs genéricas de fuentes externas (opcional)
+En lugar de “Meta Ads”, el sistema puede definir un módulo abstracto como “Fuente externa de leads”.
+Ventajas: el diseño queda neutro, escalable y no amarrado a una empresa específica.
+Recomendación de diseño (importante)
+Desde el punto de vista técnico y legal, lo mejor es no modelar Meta Ads como actor, sino como una fuente externa opcional, dejando claro que el sistema funciona completamente sin publicidad y que cualquier integración externa solo aporta datos mínimos con consentimiento previo del usuario.
+En resumen: Meta Ads no es indispensable, y la alternativa más sólida es un sistema de captación propio con formularios y consentimiento explícito, que además fortalece la privacidad, simplifica el diagrama y hace el proyecto más defendible académica y legalmente.
