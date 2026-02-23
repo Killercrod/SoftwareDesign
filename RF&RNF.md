@@ -77,10 +77,9 @@ Es la **cara del sistema hacia el cliente final**. En este módulo los interesad
   Cargas de archivos (hasta 10MB) con barra de progreso asíncrona.
 
 - **RNF-R-02:**  
-  Timeout controlado en pasarela de pagos (≤ 5 segundos).
+  Timeout controlado en pasarela de pagos(El tiempo sera delimitado dependiendo de la demanda y las limitaciones del programa).
 
-- **RNF-E-01:**  
-  Soporte para 300 peticiones concurrentes con P95 ≤ 2.5 segundos.
+
 
 ### 3. Disponibilidad y Tolerancia a Fallos
 
