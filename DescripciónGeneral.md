@@ -33,7 +33,7 @@ Es la **cara del sistema hacia el cliente final**. En este módulo los interesad
 
 ---
 
-## Requisitos Funcionales (RF) – Versión Extendida
+## Requisitos Funcionales (RF) 
 
 - **RF-01 (Gestión de Perfil):**  
   El sistema permitirá al usuario iniciar sesión y gestionar sus datos personales.
@@ -55,25 +55,6 @@ Es la **cara del sistema hacia el cliente final**. En este módulo los interesad
 
 - **RF-07 (Acceso a Contenido):**  
   El sistema permitirá visualizar los detalles y recursos de los eventos confirmados (CU-PG-009).
-
----
-
-## Requisitos Funcionales (RF) – Versión Reducida
-
-- **RF-01 (Inscripción):**  
-  Permitir al usuario enviar solicitudes de registro a eventos (CU-PG-004).
-
-- **RF-02 (Gestión Documental):**  
-  Proporcionar una interfaz para la carga y almacenamiento de documentos (CU-PG-006).
-
-- **RF-03 (Pasarela de Pagos):**  
-  Integrar un sistema de pago electrónico con validación en tiempo real (CU-PG-005).
-
-- **RF-04 (Seguimiento de Trámites):**  
-  Mostrar un panel con el historial y estado de solicitudes (CU-PG-007).
-
-- **RF-05 (Corrección de Solicitudes):**  
-  Permitir el reenvío de solicitudes rechazadas (CU-PG-008).
 
 ---
 
@@ -127,36 +108,6 @@ Es la **cara del sistema hacia el cliente final**. En este módulo los interesad
 
 ---
 
-## Requisitos No Funcionales Elegidos
 
-### Seguridad
-- **RNF:** Autenticación mediante OAuth 2.0 / JWT para acceso a documentos y pagos.
 
-### Rendimiento
-- **RNF:** TTFB < 500ms para consultas del módulo de solicitudes (CU-PG-007).
 
-### Integridad
-- **RNF:** Transacciones ACID en cambios de estado de pago (CU-PG-005).
-
-### Disponibilidad
-- **RNF:** Arquitectura con failover y RTO < 15 minutos.
-
-### Usabilidad
-- **RNF:** Persistencia de formularios y feedback visual tras errores (CU-PG-008).
-
----
-
-## Matriz de Requisitos
-
-| ID     | Tipo        | Nombre del Requisito     | Descripción Técnica |
-|------|-------------|--------------------------|---------------------|
-| RF-01 | Funcional   | Registro de Solicitud    | Envío de formularios de inscripción (CU-PG-004) |
-| RF-02 | Funcional   | Gestión de Pagos         | Pasarela para solicitudes aprobadas (CU-PG-005) |
-| RF-03 | Funcional   | Carga Documental         | Subida de archivos asociados (CU-PG-006) |
-| RF-04 | Funcional   | Monitoreo de Estatus     | Panel con estados de solicitud (CU-PG-007) |
-| RF-05 | Funcional   | Reenvío de Trámite       | Edición y reenvío de solicitudes (CU-PG-008) |
-| RNF-01| No Funcional| Seguridad (Auth)         | JWT + TLS 1.2 |
-| RNF-02| No Funcional| Rendimiento              | TTFB < 500ms |
-| RNF-03| No Funcional| Disponibilidad           | RTO < 15 minutos |
-| RNF-04| No Funcional| Integridad               | Transacciones ACID |
-| RNF-05| No Funcional| Mantenibilidad           | Arquitectura en capas |
