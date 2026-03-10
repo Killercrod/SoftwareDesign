@@ -14,8 +14,7 @@
 
 2. Rendimiento RNF-R-01 
 
-   Cargas de archivos como comprobantes (hasta 10MB) con barra de progreso asíncrona 
-
+   Cargas de archivos como comprobantes (hasta 10MB) 
    Análisis de rendimiento: habrá que tener consideración en que los archivos, aunque sean de 10MB consumen ancho de banda y memoria del servidor durante la subida de datos. La concurrencia puede saturar el servidor si varios usuarios suben archivos al mismo tiempo
 
    Análisis de seguridad: puede haber el riesgo de denegación de servicio por saturación de subidas masivas. Sera necesario validar tipo de contenido y antivirus para evitar malware o scripts malicioso
@@ -32,17 +31,8 @@
 
    Análisis de mantenimiento: obliga a probar el plan de RTO periódicamente mediante simulacros para verificar que se cumpla en la medida de 5 minutos. Sera necesario monitorear continuamente la capacidad de recuperación 
 
-4. Usabilidad (UX) RNF-U-01 
 
-   Mensajes de error estructurados con causa y sugerencia
-
-   Análisis de rendimiento: requiere procesamiento adicional para capturar el contexto, clasificar errores y generar sugerencias, podría aumentar latencia en respuestas de error, especialmente si las sugerencias requieren consultas a BD 
-
-   Análisis de seguridad: las sugerencias deben clasificarse para no revelar estructura de la base de datos o lógica de negocio. Puede haber el riesgo de filtrar información sensible si la causa expone detalles internos
-
-   Análisis de mantenimiento: requiere mantener actualizado el catálogo de errores cuando cambia la lógica de negocio
-
-5. Mantenibilidad RNF-M-01 
+4. Mantenibilidad RNF-M-01 
 
    Arquitectura en capas (Controller–Service–Repository). 
 
@@ -51,3 +41,4 @@
    Análisis de seguridad: puede haber el riesgo de implementar controles en capa incorrecta, como una validación solo en controller y no en service. La arquitectura en capas mejora el aislamiento, por lo tanto, la lógica de negocio no accede directamente a datos
 
    Análisis de mantenimiento: tiene una alta cohesión al tener una separación de responsabilidades facilita modificar una capa sin afectar
+
