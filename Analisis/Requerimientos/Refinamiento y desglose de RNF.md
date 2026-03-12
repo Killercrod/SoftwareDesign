@@ -36,7 +36,6 @@ Permitir que los usuarios carguen documentos necesarios para validación o regis
 
 - El sistema deberá aceptar archivos con un tamaño **menor o igual a 5 MB**. 
 - Si el archivo supera el límite de 5 MB, el sistema deberá rechazar la carga y mostrar un mensaje de error.
-- El sistema deberá completar la carga del archivo en un tiempo máximo de **10 segundos** en condiciones de red normales.
 
 **Impacto en el sistema** 
 
@@ -56,7 +55,6 @@ Reducir el tiempo durante el cual el módulo no está disponible.
 
 **Criterios de cumplimiento** 
 
-- El módulo **Mis Eventos** deberá volver a estar disponible en un tiempo máximo de **5 minutos** después de una falla del sistema o reinicio del servidor.
 - Después de la recuperación, el módulo deberá permitir nuevamente:
 - consulta de eventos 
 - visualización de información de eventos
@@ -109,7 +107,6 @@ Permitir que los usuarios identifiquen las acciones del sistema de forma consist
 
 - Todas las pantallas del Módulo de Usuarios deberán incluir el **mismo menú principal**. 
 
-
 - Los botones de acciones deberán utilizar las mismas etiquetas en todas las pantallas: 
 - Crear 
 - Guardar 
@@ -154,7 +151,7 @@ Garantizar tiempos de respuesta aceptables para los usuarios.
 
 **Criterios de cumplimiento** 
 
-Las siguientes acciones deberán completarse en **3 segundos o menos**: 
+Las siguientes acciones deberán completarse con exito: 
 
 - registrar usuario 
 - actualizar información de usuario
@@ -192,11 +189,11 @@ Si el correo no cumple estas condiciones, el sistema deberá mostrar un mensaje 
 - Requiere validación en el formulario de registro y edición.
 - Reduce errores en datos de contacto.
 
-**RNF-09 — Identificador único de usuario** 
+**RNF-09 — Identificador único de capacitador** 
 
 **Descripción** 
 
-El sistema deberá asignar un identificador numérico único a cada usuario registrado.
+El sistema deberá asignar un identificador numérico único a cada capacitador registrado.
 
 **Propósito** 
 
@@ -205,10 +202,11 @@ Permitir la identificación de cada usuario dentro del sistema y en la base de d
 **Criterios de cumplimiento** 
 
 - El identificador deberá ser un **valor numérico entero**. 
-- El identificador no deberá repetirse entre usuarios.
-- El identificador deberá generarse automáticamente al crear un nuevo usuario.
+- El identificador no deberá repetirse entre capacitadores.
+- El identificador deberá generarse automáticamente al crear un nuevo capacitador.
 
 **Impacto en el sistema** 
 
 - Requiere un campo de identificador en la base de datos.
-- El identificador deberá utilizarse para realizar operaciones de consulta, actualización o eliminación de usuarios.
+- El identificador deberá utilizarse para realizar operaciones de consulta, actualización o eliminación de capacitadores.
+
