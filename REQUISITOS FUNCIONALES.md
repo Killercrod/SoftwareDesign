@@ -2,6 +2,20 @@
 
 **RF-01 (Gestión de Perfil):** El sistema permitirá al usuario iniciar sesión y gestionar sus datos personales.
 
+CU-001: Iniciar Sesión y Gestionar Datos
+Actores: Usuario
+Descripción: El usuario deberá registrarse con su correo y contraseña además de poder entrar a la configuración de su perfil, ver y gestionar sus datos personales.
+Pre-Condiciones: El usuario ya debe tener una cuenta creada.
+Flujo básico:
+1. El usuario accede a la página de inicio de sesión del sistema.  
+2. El sistema muestra una interfaz solicitando el correo electrónico del usuario.
+3. El sistema valida que la dirección de correo electrónico existe en la base de datos de usuarios.
+4. El sistema genera un código de acceso temporal al correo del usuario.
+5. El sistema solicita el código de acceso.
+6. El usuario ingresa el código que recibió en su correo.
+7. El sistema valida que el código coincida con el enviado y no haya expirado.
+8. El sistema debe tener un botón para poder consultar el perfil del usuario con sus datos personales.
+9. El usuario podrá modificar alguno de los datos en que caso de que lo desee. 
 - Issue #001: (Backend): Crear endpoint unificado de registro/login, recibe email y contraseña.
 
 - Issue #002: (Backend): Crear endpoint para obtener perfil del usuario autenticado, requiere token válido. 
