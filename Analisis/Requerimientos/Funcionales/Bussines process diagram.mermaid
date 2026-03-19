@@ -1,0 +1,92 @@
+flowchart TD
+    A[Inicio: Acceso al sistema] --> B{¿Usuario autenticado?}
+    B -->|No| C[Proceso de Autenticación]
+    B -->|Sí| D[Dashboard Principal]
+
+    subgraph Autenticación [RF-01 Autenticación]
+        C --> C1[Ingresar email y contraseña]
+        C1 --> C2{Validar credenciales}
+        C2 -->|Inválidas| C1
+        C2 -->|Válidas| C3[Generar y enviar código temporal al email]
+        C3 --> C4[Ingresar código recibido]
+        C4 --> C5{Validar código}
+        C5 -->|Inválido o expirado| C4
+        C5 -->|Válido| C6[Generar token de autenticación]
+        C6 --> D
+    end
+
+    D --> E[Seleccionar opción]
+
+    E --> F[Gestionar Perfil]
+    E --> G[Explorar Eventos Disponibles]
+    E --> H[Consultar Mis Solicitudes]
+    E --> I[Acceder a Mis Eventos]
+
+    subgraph Perfil [RF-01 Gestión de Perfil]
+        F --> F1[Ver perfil: email, nombre, teléfono]
+        F1 --> F2{¿Editar?}
+        F2 -->|No| F1
+        F2 -->|Sí| F3[Mostrar formulario precargado]
+        F3 --> F4[Modificar datos]
+        F4 --> F5{Validar campos}
+        F5 -->|Inválidos| F4
+        F5 -->|Válidos| F6[Enviar actualización]
+        F6 --> F7[Mostrar confirmación]
+        F7 --> F1
+    end
+
+    subgraph Inscripcion [RF-02 Solicitud de Inscripción + RF-03 Carga de Documentos]
+        G --> G1[Listar eventos disponibles]
+        G1 --> G2[Seleccionar evento]
+        G2 --> G3[Ver detalle completo]
+        G3 --> G4{¿Iniciar inscripción?}
+        G4 -->|No| G2
+        G4 -->|Sí| G5[Obtener formulario dinámico del evento]
+        G5 --> G6[Completar datos de inscripción]
+        G6 --> G7[Para cada documento requerido: Cargar archivo]
+        
+        subgraph CargaDocumento [Carga de Documentos - RF-03]
+            G7 --> D1[Seleccionar archivo]
+            D1 --> D2{Validar tipo y tamaño}
+            D2 -->|No permitido| D1
+            D2 -->|Válido| D3[Subir archivo]
+            D3 --> D4{¿Éxito?}
+            D4 -->|Error| D1
+            D4 -->|OK| D5[Mostrar notificación de éxito]
+            D5 --> D6{¿Cancelar carga?}
+            D6 -->|Sí| D7[Descartar archivo temporal]
+            D6 -->|No| D8{¿Todos los documentos cargados?}
+            D8 -->|No| G7
+        end
+
+        D8 -->|Sí| G8[Enviar solicitud]
+        G8 --> G9[Solicitud registrada con estado pendiente]
+        G9 --> H
+    end
+
+    subgraph Solicitudes [RF-04 Consulta de Estatus + RF-05 Reenvío]
+        H --> H1[Listar solicitudes del usuario]
+        H1 --> H2[Seleccionar solicitud]
+        H2 --> H3[Ver detalle: evento, estado, documentos, pago]
+        H3 --> H4{Estado editable? (Rechazada o Incompleta)}
+        H4 -->|No| H2
+        H4 -->|Sí| H5[Opción Editar Solicitud]
+        H5 --> H6[Mostrar formulario con datos actuales]
+        H6 --> H7[Modificar datos / cargar documentos faltantes]
+        H7 --> H8{Validar campos y documentos}
+        H8 -->|Inválidos| H7
+        H8 -->|Válidos| H9[Enviar actualización]
+        H9 --> H10[Cambiar estado a 'En revisión']
+        H10 --> H11[Mostrar notificación de reenvío exitoso]
+        H11 --> H2
+    end
+
+    subgraph EventosAprobados [RF-06 Acceso a Contenido]
+        I --> I1{Obtener eventos con solicitud aprobada}
+        I1 --> I2[Listar eventos aprobados]
+        I2 --> I3[Seleccionar evento]
+        I3 --> I4{Validar acceso}
+        I4 -->|No autorizado| I2
+        I4 -->|Autorizado| I5[Mostrar detalle del evento con recursos]
+        I5 --> I2
+    end
