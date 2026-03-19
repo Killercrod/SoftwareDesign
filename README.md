@@ -13,10 +13,33 @@ El sistema tiene como objetivo automatizar y optimizar todo el ciclo de vida de 
 ---
 ## Índice de Documentos
 
-- [Análisis de Usuarios](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis%20de%20Usuarios.pdf)
-- [Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/main/CasosDeUso.md)
-- [Consideraciones para el Sistema](https://github.com/Killercrod/SoftwareDesign/blob/main/ConsideracionesParaElSistema.md)
-- [Descripción General del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/main/DescripciónGeneral.md)
+- # Bitacoras
+[Cesar Rodriguez](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/Cesar%20Rodriguez)
+
+[Ivan Chi](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/IvanChi)
+
+[Mango Espinosa](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/MangoEspinosa)
+
+[Omar Chim](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/OmarChim)
+
+[Braulio Tello](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/Tello%20Braulio)
+
+- # Metodologia de trabajo
+[Metodologia de trabajo](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Metodologia%20de%20trabajo.md)
+
+- # Requisitos Funcionales
+[Requerimientos Funcionales y Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
+
+[Issues de los Requerimientos Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md)
+
+[Bussines process diagram](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Bussines%20process%20diagram.mermaid)
+
+# Requisitos No Funcionales
+
+[Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+
+[Requisitos No Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
+
 # Introducción al Proyecto ECFCA
 ---
 
@@ -44,12 +67,4 @@ Hemos seleccionado el **Módulo de Gestión de Usuarios** como punto de partida 
 
 Esta elección estratégica nos permitirá entregar valor tangible en un plazo razonable, establecer una arquitectura robusta y escalable, y generar aprendizajes que faciliten el abordaje posterior de los módulos restantes.
 
-# Requisitos Funcionales
-[Requerimientos Funcionales y Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/RF_CasosDeUso.md)
 
-[Issues de los Requerimientos Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Desglose%20de%20Issues%20(RF).md)
-
-# Requisitos No Funcionales
-[Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Atributos%20de%20calidad%20del%20sistema.md)
-
-[Requisitos No Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Refinamiento%20y%20desglose%20de%20RNF.md)
