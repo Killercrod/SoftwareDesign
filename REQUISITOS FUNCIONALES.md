@@ -98,30 +98,105 @@ Flujo de Excepciones:
 
 
  
-**RF-04 (Consulta de Estatus)**: El sistema mostrará una lista consolidada con el estado de solicitudes y pagos del usuario autenticado (CU-PG-007).
+RF-04 (Consulta de Estatus):
+El sistema mostrará una lista consolidada con el estado de solicitudes y pagos del usuario autenticado.
+CU-PG-007: Consultar Estatus de Solicitudes
+Actores: Usuario
+Descripción: El usuario podrá visualizar una lista de sus solicitudes que incluya en ella: su estado actual, detalles descriptivos de cada una, documentos y estado de pago
+Pre-Condiciones: El usuario debe haber iniciado sesión y contar con al menos una solicitud registrada.
 
-- Issue #001 (Backend): Crear endpoint para listar las solicitudes del usuario autenticado con estado actual (pendiente, aprobada, rechazada, en revisión).
+Flujo básico:
+1.	El usuario accede a la sección "Mis Solicitudes".
+2.	El sistema muestra una lista de solicitudes del usuario.
+3.	Cada solicitud incluye su estado (pendiente, aprobada, rechazada, en revisión).
+4.	El usuario selecciona una solicitud específica.
+5.	El sistema muestra el detalle completo de la solicitud (el detalle incluye información del evento asociado)
+6.	El sistema muestra el estado de los documentos requeridos y cargados.
+7.	El sistema muestra el estado de pago de la solicitud.
 
-- Issue #002 (Backend): Crear endpoint para obtener el detalle de una solicitud específica, incluyendo estado de documentos y estado de pago.
+Flujo de Excepciones:
+1.	No existen solicitudes registradas para el usuario.
+2.	Error al obtener la información de las solicitudes.
+3.	Solicitud no encontrada.
 
-- Issue #003 (Frontend): Crear vista de "Mis Solicitudes" que muestre una lista de las solicitudes del usuario con su estado y evento asociado.
+Issues:
 
-- Issue #004 (Frontend): Crear vista de detalle de solicitud donde se muestre información completa (evento, estado de solicitud, documentos requeridos, documentos cargados y estado de pago).
+•	Issue #001 (Backend): Crear endpoint para listar las solicitudes del usuario autenticado con su estado actual (pendiente, aprobada, rechazada, en revisión).
 
-**RF-05 (Reenvío de Solicitudes)**: El sistema permitirá editar y reenviar solicitudes rechazadas o con información incompleta (CU-PG-008).
+•	Issue #002 (Backend): Crear endpoint para obtener el detalle de una solicitud específica, incluyendo estado de documentos y estado de pago.
 
-- Issue #001 (Backend): Crear endpoint para actualizar una solicitud existente cuando su estado sea "rechazada" o "información incompleta".
+•	Issue #003 (Frontend): Crear vista de "Mis Solicitudes" que muestre una lista de las solicitudes del usuario con su estado y evento asociado.
 
-- Issue #002 (Backend): Validar que la solicitud a editar pertenezca al usuario autenticado y que su estado permita modificaciones.
+•	Issue #004 (Frontend): Crear vista de detalle de solicitud donde se muestre información completa (evento, estado de solicitud, documentos requeridos, documentos cargados y estado de pago).
 
-- Issue #003 (Frontend): Implementar opción "Editar solicitud" en solicitudes rechazadas o incompletas desde la vista de detalle.
 
-- Issue #004 (Frontend): Implementar formulario de edición que permita modificar los campos necesarios y reenviar la solicitud.
 
-- Issue #005 (Frontend): Mostrar notificación de confirmación cuando la solicitud sea reenviada exitosamente.
+RF-05 (Reenvío de Solicitudes):
+El sistema permitirá editar y reenviar solicitudes rechazadas o con información incompleta.
+CU-PG-008: Reenviar Solicitud
+Actores: Usuario
+Descripción: El usuario podrá editar una solicitud previamente rechazada o incompleta y reenviarla para su validación.
+Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud en estado "rechazada" o "información incompleta".
 
- **RF-06 (Acceso a Contenido)**: El sistema permitirá visualizar los detalles y recursos de los eventos confirmados (CU-PG-009).
-- Issue #001 (Backend): Crear endpoint para obtener los recursos y detalles de un evento al que el usuario esté inscrito y aprobado.
-- Issue #002 (Backend): Validar que el usuario tenga una solicitud aprobada para el evento antes de permitir el acceso a su contenido.
-- Issue #003 (Frontend): Crear sección "Mis Eventos" que liste los eventos confirmados del usuario.
-- Issue #004 (Frontend): Crear vista de detalle del evento que muestre información, recursos disponibles y materiales asociados
+Flujo básico:
+1.	El usuario accede a la sección "Mis Solicitudes".
+2.	El sistema muestra la lista de solicitudes.
+3.	El usuario selecciona una solicitud con estado editable.
+4.	El sistema muestra el detalle de la solicitud.
+5.	El usuario selecciona la opción "Editar solicitud".
+6.	El sistema despliega un formulario con los datos actuales.
+7.	El usuario modifica los campos necesarios.
+8.	El usuario envía la solicitud actualizada.
+9.	El sistema valida la información ingresada.
+10.	El sistema actualiza la solicitud y cambia su estado a "en revisión".
+    
+Flujo de Excepciones:
+1.	La solicitud no se encuentra en un estado editable.
+2.	Error en la validación de datos.
+3.	Error al actualizar la solicitud.
+   
+Issues:
+
+•	Issue #001 (Backend): Crear endpoint para actualizar una solicitud existente cuando su estado sea "rechazada" o "información incompleta".
+
+•	Issue #002 (Backend): Validar que la solicitud a editar pertenezca al usuario autenticado y que su estado permita modificaciones.
+
+•	Issue #003 (Frontend): Implementar opción "Editar solicitud" en solicitudes rechazadas o incompletas desde la vista de detalle.
+
+•	Issue #004 (Frontend): Implementar formulario de edición que permita modificar los campos necesarios y reenviar la solicitud.
+
+•	Issue #005 (Frontend): Mostrar notificación de confirmación cuando la solicitud sea reenviada exitosamente.
+
+
+
+RF-06 (Acceso a Contenido):
+El sistema permitirá visualizar los detalles y recursos de los eventos confirmados.
+CU-PG-009: Acceder a Contenido de Eventos
+Actores: Usuario
+Descripción: El usuario podrá acceder a los eventos en los que ha sido aprobado, visualizando sus detalles y recursos disponibles.
+Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud aprobada para al menos un evento.
+
+Flujo básico:
+1.	El usuario accede a la sección "Mis Eventos".
+2.	El sistema muestra la lista de eventos confirmados del usuario.
+3.	El usuario selecciona un evento.
+4.	El sistema valida que el usuario tenga acceso al evento.
+5.	El sistema muestra el detalle del evento.
+6.	El sistema muestra los recursos disponibles del evento.
+7.	El sistema muestra materiales asociados al evento.
+   
+Flujo de Excepciones:
+1.	El usuario no tiene eventos confirmados.
+2.	El usuario intenta acceder a un evento sin aprobación.
+3.	Error al cargar los recursos del evento.
+   
+Issues:
+
+•	Issue #001 (Backend): Crear endpoint para obtener los recursos y detalles de un evento al que el usuario esté inscrito y aprobado.
+
+•	Issue #002 (Backend): Validar que el usuario tenga una solicitud aprobada para el evento antes de permitir el acceso a su contenido.
+
+•	Issue #003 (Frontend): Crear sección "Mis Eventos" que liste los eventos confirmados del usuario.
+
+•	Issue #004 (Frontend): Crear vista de detalle del evento que muestre información, recursos disponibles y materiales asociados.
+
