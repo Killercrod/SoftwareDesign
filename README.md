@@ -43,3 +43,11 @@ Hemos seleccionado el **Módulo de Gestión de Usuarios** como punto de partida 
 5. **Documentación existente**: Contamos con una base sólida de casos de uso y requisitos definidos en el repositorio original, así como un avance documentado por nuestro equipo, lo que nos permite progresar de manera ordenada y consistente.
 
 Esta elección estratégica nos permitirá entregar valor tangible en un plazo razonable, establecer una arquitectura robusta y escalable, y generar aprendizajes que faciliten el abordaje posterior de los módulos restantes.
+
+# Requisitos Funcionales
+[Requerimientos Funcionales y Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/RF_CasosDeUso.md)
+[Issues de los Requerimientos Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Desglose%20de%20Issues%20(RF).md)
+
+# Requisitos No Funcionales
+[Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Atributos%20de%20calidad%20del%20sistema.md)
+[Requisitos No Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/c1fa32e1ec613aa1efc2dccd23655228d4131d4f/Analisis/Requerimientos/Refinamiento%20y%20desglose%20de%20RNF.md)
