@@ -1,4 +1,124 @@
-## RF-04 – Consulta de Estatus (Issues en prosa)
+# Desglose de Issues (Requerimientos Funcionales)
+## RF-01 - Gestión de Perfil
+- **Issue #001 (Backend)** : Endpoint unificado de autenticación
+
+  Se deberá implementar un endpoint que permita gestionar el inicio de sesión del usuario mediante correo electrónico y contraseña.
+
+  El sistema deberá recibir las credenciales del usuario y validar que el correo exista en la base de datos. En caso de ser válido, se deberá generar un código de acceso temporal que será   enviado al correo electrónico registrado.
+
+  Posteriormente, el sistema deberá validar el código ingresado por el usuario, asegurando que coincida con el generado y que no haya expirado.
+  Una vez validado correctamente, el sistema deberá generar un token de autenticación que permita acceder a los recursos protegidos.
+
+  En caso de credenciales incorrectas, código inválido o expirado, el sistema deberá rechazar la autenticación.
+
+- **Issue #002 (Backend)** : Obtención del perfil del usuario
+
+  Se deberá implementar un endpoint que permita obtener la información del perfil del usuario autenticado.
+  
+  El sistema deberá validar el token de autenticación y extraer el identificador del usuario.
+  Posteriormente, deberá consultar la base de datos y retornar los datos del perfil, incluyendo al menos correo electrónico, nombre y teléfono.
+  
+  Si el token no es válido o no está presente, el sistema deberá rechazar la solicitud.
+
+- **Issue #003 (Frontend)** : Vista de perfil de usuario
+
+  Se deberá desarrollar una vista que permita visualizar la información del perfil del usuario.
+  
+  La vista deberá consumir el endpoint correspondiente y mostrar de forma clara los datos del usuario, incluyendo correo electrónico, nombre y número telefónico.
+  
+  La información deberá presentarse en formato legible y organizado, sin permitir modificaciones directas en modo visualización.
+
+- **Issue #004 (Frontend)** : Edición del perfil
+
+  Se deberá implementar un modo de edición dentro de la vista de perfil.
+  
+  Al activar este modo, el sistema deberá mostrar un formulario precargado con la información actual del usuario.
+  El usuario podrá modificar los campos disponibles y guardar los cambios.
+  
+  El sistema deberá validar que los datos ingresados cumplan con los formatos requeridos antes de enviarlos al backend.
+  Una vez actualizados correctamente, se deberá reflejar la información actualizada en la vista y mostrar una confirmación al usuario.
+
+## RF-02 – Solicitud de Inscripción
+- **Issue #001 (Backend)**: Listado de eventos disponibles
+
+  Se deberá implementar un endpoint que retorne todos los eventos disponibles para inscripción.
+  
+  El sistema deberá proporcionar, para cada evento, la siguiente información: identificador, nombre, fecha de inicio, fecha de finalización, descripción breve, precio y el estado de la solicitud del usuario respecto a dicho evento.
+  
+  En caso de que el usuario no tenga una solicitud asociada, el estado deberá indicarse como no existente o equivalente.
+- **Issue #002 (Backend)**: Detalle de evento
+
+  Se deberá implementar un endpoint que permita obtener la información completa de un evento específico.
+  
+  El sistema deberá recibir el identificador del evento y validar su existencia.
+  En caso de ser válido, deberá retornar toda la información relevante del evento, incluyendo descripción completa, fechas, costo y cualquier dato adicional necesario para la inscripción.
+- **Issue #003 (Backend)**: Generación de formulario de inscripción
+
+  Se deberá implementar la lógica necesaria para proporcionar los campos requeridos para el registro a un evento.
+  
+  El sistema deberá definir los datos necesarios para completar la inscripción, los cuales podrán variar dependiendo del evento.
+  Estos campos deberán ser retornados al frontend para su renderización dinámica.
+- **Issue #004 (Frontend)**: Sección de eventos disponibles
+
+  Se deberá implementar una sección denominada “Eventos Disponibles”.
+  
+  Esta vista deberá consumir el endpoint de listado de eventos y mostrar la información de forma estructurada, permitiendo al usuario identificar rápidamente las opciones disponibles.
+  
+  Cada evento deberá incluir una opción para visualizar más detalles.
+- **Issue #005 (Frontend)**: Vista de detalle de evento
+
+  Se deberá implementar una vista que muestre la información completa de un evento seleccionado.
+  
+  Esta vista deberá consumir el endpoint correspondiente y presentar todos los datos relevantes, incluyendo descripción, fechas, costo y estado de inscripción del usuario.
+- **Issue #006 (Frontend)**: Acción de inscripción
+
+  Se deberá implementar la funcionalidad que permita al usuario iniciar el proceso de inscripción a un evento.
+  
+  Esta acción deberá estar disponible tanto desde la lista como desde la vista de detalle del evento.
+  Al activarse, el sistema deberá mostrar el formulario de inscripción correspondiente.
+
+## RF-03 - Carga de Documentación
+- **Issue #001 (Backend)**: Obtención de documentos requeridos
+
+  Se deberá implementar un endpoint que permita obtener la lista de documentos requeridos para una solicitud específica.
+  
+  El sistema deberá validar que la solicitud exista y que pertenezca al usuario autenticado.
+  En caso de ser válida, deberá retornar el listado de documentos obligatorios.
+- **Issue #002 (Backend)**: Carga de documentos
+
+  Se deberá implementar un endpoint que permita subir archivos asociados a una solicitud.
+  
+  El sistema deberá validar: Existencia de la solicitud y que pertenezca al usuario autenticado.
+  
+  Una vez validado, deberá almacenar el archivo y asociarlo correctamente a la solicitud correspondiente.
+- **Issue #003 (Backend)**: Validación de documentos completos
+
+  Se deberá implementar una funcionalidad que permita verificar si una solicitud cuenta con todos los documentos requeridos.
+  
+  El sistema deberá comparar la lista de documentos obligatorios del evento con los documentos cargados por el usuario y determinar si la documentación está completa.
+- **Issue #004 (Backend)**: Manejo de formatos no permitidos
+
+  Se deberá implementar una validación que restrinja los tipos de archivo permitidos.
+  
+  En caso de que el usuario intente subir un archivo con un formato no permitido, el sistema deberá rechazar la operación y retornar un mensaje de error claro.
+- **Issue #005 (Frontend)**: Componente de carga de documentos
+
+  Se deberá desarrollar un componente reutilizable denominado “CargarDocumento”.
+  
+  Este componente deberá incluir un campo de selección de archivo y validar en el cliente: Tipo de archivo permitido y tamaño máximo permitido.
+  
+  El componente deberá ser reutilizable en distintas partes del sistema.
+- **Issue #006 (Frontend)**: Notificación de carga exitosa
+
+  Una vez que un documento sea cargado correctamente, el sistema deberá mostrar una notificación temporal indicando que la operación fue exitosa.
+  
+  El mensaje deberá ser claro y visible para el usuario.
+- **Issue #007 (Frontend)**: Cancelación de carga
+
+  Se deberá implementar una opción que permita cancelar la carga de un archivo en proceso.
+  
+  Al cancelar, el sistema deberá detener la operación, descartar cualquier dato temporal y regresar al estado previo sin realizar cambios en la solicitud.
+## RF-04 – Consulta de Estatus
 - **Issue #001 (Backend)** : Listado de solicitudes del usuario, se deberá implementar un endpoint que permita obtener todas las solicitudes asociadas al usuario autenticado.
 
   El sistema deberá validar el token de autenticación proporcionado en la petición y extraer el identificador del usuario.
@@ -58,7 +178,7 @@
   La interfaz deberá permitir al usuario identificar fácilmente el progreso de su solicitud.
 
 
-## RF-05 – Reenvío de Solicitudes (Issues en prosa)
+## RF-05 – Reenvío de Solicitudes
 - Issue #001 (Backend): Actualización de solicitudes
 
   Se deberá implementar un endpoint que permita actualizar una solicitud existente.
@@ -104,7 +224,7 @@
   
   En caso de error, se deberá mostrar un mensaje informativo con la causa del fallo.
 
-## RF-06 – Acceso a Contenido (Issues en prosa)
+## RF-06 – Acceso a Contenido
 - Issue #001 (Backend): Obtención de eventos aprobados
 
   Se deberá implementar un endpoint que retorne la lista de eventos a los que el usuario tiene acceso.
