@@ -70,7 +70,7 @@ flowchart TD
         H --> H1[Listar solicitudes del usuario]
         H1 --> H2[Seleccionar solicitud]
         H2 --> H3[Ver detalle: evento, estado, documentos, pago]
-        H3 --> H4{Estado editable? (Rechazada o Incompleta)}
+        H3 --> H4{"Estado editable? (Rechazada o Incompleta)"}
         H4 -->|No| H2
         H4 -->|Sí| H5[Opción Editar Solicitud]
         H5 --> H6[Mostrar formulario con datos actuales]
