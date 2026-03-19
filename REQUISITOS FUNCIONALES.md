@@ -1,4 +1,4 @@
-
+## Requerimientos Funcionales y Casos de Uso
 
 **RF-01 (Gestión de Perfil):** El sistema permitirá al usuario iniciar sesión y gestionar sus datos personales.
 
@@ -15,7 +15,13 @@ Flujo básico:
 6. El usuario ingresa el código que recibió en su correo.
 7. El sistema valida que el código coincida con el enviado y no haya expirado.
 8. El sistema debe tener un botón para poder consultar el perfil del usuario con sus datos personales.
-9. El usuario podrá modificar alguno de los datos en que caso de que lo desee. 
+9. El usuario podrá modificar alguno de los datos en que caso de que lo desee.
+
+Flujo de Excepciones:
+1. Correo electrónico no válido.
+2. Código de acceso temporal incorrecto.
+3. Código de acceso expirado.
+
 - Issue #001: (Backend): Crear endpoint unificado de registro/login, recibe email y contraseña.
 
 - Issue #002: (Backend): Crear endpoint para obtener perfil del usuario autenticado, requiere token válido. 
@@ -26,6 +32,26 @@ Flujo básico:
 
 
 **RF-02 (Solicitud de Inscripción):** El sistema permitirá al usuario seleccionar un evento en la sección de “Eventos Disponibles”, mostrar información clave (nombre, fechas, breve descripción, precio, estado de solicitud, etc.) y enviar una solicitud de inscripción (CU-PG-004).
+
+CU-02: Seleccionar Evento y Enviar Solicitud de Inscripción.
+Actores: Usuario
+Descripción: El usuario podrá navegar entre los distintos eventos que oferta la plataforma, revisar detalles sobre los eventos de su interés y enviar una solicitud de inscripción al evento seleccionado.
+Pre-Condiciones: El usuario debe haberse registrado en el sistema con su correo y contraseña para acceder a la plataforma.
+Flujo básico:
+1. El usuario entra a la sección de Eventos Disponibles
+2. El sistema muestra la lista de los distintos eventos
+3. El usuario podrá navegar entre la lista de eventos disponibles
+4. El usuario podrá acceder a información como nombre, fechas, descripción, precio.
+5. El usuario podrá enviar una solicitud de inscripción a través del botón inscribirse.
+6. El usuario rellenará los datos del formulario.
+7. El sistema valida los datos.
+8. El sistema muestra mensaje de confirmación de recibida la solicitud.
+
+Flujo de Excepciones:
+1. No hay cupo en el evento.
+2. El usuario ya está inscrito.
+3. Datos inválidos en el formulario.
+4. Formulario de inscripción incompleto.
 
 - Issue #001: (Backend): Listar los eventos disponibles con su campo requerido (id, nombre, fecha_inicio, fecha_fin, descripción_breve, precio, estado_solicitud_usuario).
 
@@ -41,6 +67,20 @@ Flujo básico:
 
 **RF-03 (Carga de Documentación)**: El sistema permitirá subir archivos digitalizados asociados a una solicitud como parte del proceso de solicitud o cuando un administrativo solicita información adicional para una solicitud existente (CU-PG-006).
 
+CU-03: Carga de Documentación.
+Actores: Usuario.
+Pre-Condiciones: El usuario debe haberse inscrito al evento de su interés.
+Flujo Básico:
+1. El sistema despliega un listado de documentos necesarios que el usuario debe subir.
+2. El usuario debe seleccionar debe seleccionar el botón de Cargar Documento.
+3. El usuario debe seleccionar el archivo correspondiente en su explorador de archivos confirmando la subida.
+4. El sistema envía el archivo al backend, verificando su autenticidad y que sea formato correcto.
+5. El sistema despliega el mensaje de Subido Correctamente.
+
+Flujo de Excepciones:
+1. Tipo de archivo no permitido.
+2. El tamaño del archivo es excedido.
+3. Cancelación de la subida por parte del usuario.
 
 - Issue #001: (Backend): Crear endpoint para obtener documentos requeridos de una solicitud, Validar que la solicitud existe y pertenece al usuario autenticado.
 
