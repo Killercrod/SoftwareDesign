@@ -5,9 +5,9 @@ title: "[Tipo] Breve descripción del problema o tarea"
 labels: ["pendiente"]
 assignees: ""
 ---
-# Agregar al issue las milestones
-# El proyecto al que estan vinculado las rama que va a estar relacuonada al issue
-# La rama que va a estar relacionada al issue
+- Agregar al issue las milestones
+- El proyecto al que estan vinculado las rama que va a estar relacuonada al issue
+- La rama que va a estar relacionada al issue
 
 ## 📝 Descripción
 <!-- Explica de forma concisa qué se necesita. ¿Qué problema resuelve? ¿Qué valor aporta? -->
