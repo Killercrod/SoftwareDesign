@@ -1,6 +1,5 @@
-# Reunion 25/03/26:
+# Bitácora 26/03/26:
 
-El día de hoy se asignaron las tareas a realizar para la siguiente reunión, el weekly del 26/03/2026
+Realice el issue #53 Documentar criterios de modificabilidad y mantenibilidad, así como colaborar con mi compañero Omarchin para el issue #54 Estrategia de Gestión de base de datos (en progreso).
+Así mismo, he estado realizando los RNF, previamente con mi compañero Omarchin 
 
-Se me asignaron las siguientes tareas:
-- Documentar criterios de modificabilidad y mantenibilidad:
