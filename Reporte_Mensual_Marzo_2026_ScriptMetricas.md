@@ -14,7 +14,7 @@
   - `Weekly #1 Jueves 12` (2026-03-05 a 2026-03-12)
   - `Weekly  #2 Jueves 19` (2026-03-12 a 2026-03-19)
   - `Weekly #3 Jueves 26` (2026-03-19 a 2026-03-26)
-  - `Weekly#4` (2026-03-24 a 2026-03-31)
+  - `Weekly#4 Martes 31` (2026-03-24 a 2026-03-31)
 - Totales del periodo cubierto por milestones:
   - Commits: 120
   - PRs fusionados: 0
