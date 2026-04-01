@@ -1,4 +1,3 @@
-
 flowchart TD
     A[Inicio: Acceso al sistema] --> B{¿Usuario autenticado?}
     B -->|No| C[Proceso de Autenticación]
@@ -36,17 +35,21 @@ flowchart TD
         F7 --> F1
     end
 
-    subgraph Inscripcion [RF-02 Solicitud de Inscripción + RF-03 Carga de Documentos]
+    subgraph Inscripcion [RF-02 Solicitud de Inscripción + RF-03 Carga de documentos]
         G --> G1[Listar eventos disponibles]
         G1 --> G2[Seleccionar evento]
         G2 --> G3[Ver detalle completo]
-        G3 --> G4{¿Iniciar inscripción?}
+        G3 --> G3a{¿Hay cupo y no está inscrito?}
+        G3a -->|No| G2
+        G3a -->|Sí| G4{¿Iniciar inscripción?}
         G4 -->|No| G2
         G4 -->|Sí| G5[Obtener formulario dinámico del evento]
         G5 --> G6[Completar datos de inscripción]
-        G6 --> G7[Para cada documento requerido: Cargar archivo]
+        G6 --> G6a{¿Formulario válido y completo?}
+        G6a -->|No| G6
+        G6a -->|Sí| G7[Para cada documento requerido: Cargar archivo]
         
-        subgraph CargaDocumento [Carga de Documentos - RF-03]
+        subgraph CargaDocumento [Carga de documentos - RF-03]
             G7 --> D1[Seleccionar archivo]
             D1 --> D2{Validar tipo y tamaño}
             D2 -->|No permitido| D1
@@ -69,7 +72,7 @@ flowchart TD
         H --> H1[Listar solicitudes del usuario]
         H1 --> H2[Seleccionar solicitud]
         H2 --> H3[Ver detalle: evento, estado, documentos, pago]
-        H3 --> H4{"Estado editable? (Rechazada o Incompleta)"}
+        H3 --> H4{¿Estado editable? (Rechazada o información incompleta)}
         H4 -->|No| H2
         H4 -->|Sí| H5[Opción Editar Solicitud]
         H5 --> H6[Mostrar formulario con datos actuales]
