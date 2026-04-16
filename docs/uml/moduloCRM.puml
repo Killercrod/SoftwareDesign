@@ -1,0 +1,30 @@
+@startuml
+' Contexto:
+' Gestión de leads (ventas / captación desde fuentes externas)
+
+' API (según contexto):
+' POST /leads
+' GET /leads
+' PUT /leads/{id}
+
+class Lead {
+  id: int
+  nombre: string
+  email: string
+  estado: string
+}
+
+class Interaccion {
+  id: int
+  fecha: date
+  tipo: string
+}
+
+class Comunicacion {
+  medio: string
+  mensaje: string
+}
+
+Lead "1" -- "*" Interaccion
+Interaccion "1" -- "1" Comunicacion
+@enduml
