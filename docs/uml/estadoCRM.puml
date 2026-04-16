@@ -1,0 +1,8 @@
+@startuml
+' Estados de un lead en CRM
+
+[*] --> Nuevo
+Nuevo --> Contactado
+Contactado --> Calificado
+Calificado --> Convertido
+@enduml
