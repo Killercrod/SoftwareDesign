@@ -1,0 +1,10 @@
+@startuml
+' Estados de una solicitud de inscripción
+
+[*] --> Pendiente
+Pendiente --> EnRevision
+EnRevision --> Aprobada
+EnRevision --> Rechazada
+Rechazada --> EnRevision
+Aprobada --> Cancelada
+@enduml
