@@ -1,0 +1,8 @@
+@startuml
+' Estados de un evento
+
+[*] --> Borrador
+Borrador --> Publicado
+Publicado --> Finalizado
+Publicado --> Cancelado
+@enduml
