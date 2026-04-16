@@ -1,0 +1,18 @@
+@startuml
+' Caso: Gestión de lead (CRM)
+' API: POST /leads, PUT /leads/{id}
+
+actor Usuario
+participant UI
+participant CRMService
+participant LeadRepository
+
+Usuario -> UI: crear / actualizar lead
+UI -> CRMService: guardarLead(datos)
+
+CRMService -> LeadRepository: save(lead)
+LeadRepository --> CRMService: ok
+
+CRMService --> UI: confirmación
+UI --> Usuario: operación exitosa
+@enduml
