@@ -1,0 +1,49 @@
+@startuml
+' Casos de uso:
+' CU-02 Seleccionar evento e inscripción
+' CU-03 Carga de documentación
+' CU-04 Consultar estatus
+' CU-05 Reenvío de solicitud
+' CU-06 Acceso a contenido
+
+' API (según issues):
+' GET /eventos
+' GET /eventos/{id}
+' POST /inscripciones
+' GET /solicitudes
+' GET /solicitudes/{id}
+
+class Evento {
+  id: int
+  nombre: string
+  fecha_inicio: date
+  fecha_fin: date
+  descripcion: string
+  precio: float
+}
+
+class Categoria {
+  nombre: string
+}
+
+class Inscripcion {
+  id: int
+  estado: string
+  fecha: date
+}
+
+class Solicitud {
+  id: int
+  estado: string
+}
+
+class Documento {
+  nombre: string
+  tipo: string
+}
+
+Evento "*" -- "1" Categoria
+Evento "1" -- "*" Inscripcion
+Inscripcion "1" -- "1" Solicitud
+Solicitud "1" -- "*" Documento
+@enduml
