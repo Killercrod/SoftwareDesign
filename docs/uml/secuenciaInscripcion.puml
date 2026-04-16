@@ -1,0 +1,26 @@
+@startuml
+' Caso de uso: CU-02 Seleccionar evento e inscripción
+' API: POST /inscripciones
+
+actor Usuario
+participant UI
+participant InscripcionService
+participant EventoRepository
+participant InscripcionRepository
+
+Usuario -> UI: solicitar inscripción
+UI -> InscripcionService: registrar(usuario, evento, datos)
+
+InscripcionService -> EventoRepository: verificar disponibilidad
+EventoRepository --> InscripcionService: disponible / no disponible
+
+alt cupo disponible
+    InscripcionService -> InscripcionRepository: guardar(inscripción)
+    InscripcionRepository --> InscripcionService: ok
+    InscripcionService --> UI: confirmación
+    UI --> Usuario: inscripción enviada
+else sin cupo
+    InscripcionService --> UI: error
+    UI --> Usuario: no hay cupo
+end
+@enduml
