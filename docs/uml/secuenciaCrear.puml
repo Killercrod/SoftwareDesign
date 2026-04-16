@@ -1,0 +1,16 @@
+@startuml
+' Caso de uso: Gestión de eventos (crear evento)
+' API: POST /eventos
+
+actor Usuario
+participant UI
+participant EventoService
+participant EventoRepository
+
+Usuario -> UI: crear evento (datos)
+UI -> EventoService: crearEvento(datos)
+EventoService -> EventoRepository: guardar(evento)
+EventoRepository --> EventoService: ok
+EventoService --> UI: confirmación
+UI --> Usuario: evento creado
+@enduml
