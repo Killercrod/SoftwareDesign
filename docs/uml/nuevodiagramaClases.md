@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
 
 class Usuario {
@@ -49,3 +50,4 @@ Usuario "1" --> "*" Inscripcion
 Evento "1" --> "*" Inscripcion
 Inscripcion "1" --> "1" Solicitud
 Solicitud "1" --> "*" Documento
+```
