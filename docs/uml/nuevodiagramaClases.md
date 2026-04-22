@@ -1,11 +1,9 @@
-```mermaid
 classDiagram
 
 class Usuario {
   int id
   string email
   string password
-  string estado
   +iniciarSesion()
 }
 
@@ -23,63 +21,31 @@ class Evento {
   string nombre
   date fecha_inicio
   date fecha_fin
-  string descripcion
-  float precio
-  +hayCupo()
-}
-
-class Categoria {
-  string nombre
+  +verificarCupo()
 }
 
 class Inscripcion {
   int id
   string estado
-  date fecha
-  +crear()
 }
 
 class Solicitud {
   int id
   string estado
   +validarDatos()
-  +registrar()
+  +registrarSolicitud()
 }
 
 class Documento {
   string nombre
   string tipo
-  +subir()
-}
-
-class Lead {
-  int id
-  string nombre
-  string email
-  string estado
-  +crear()
-}
-
-class Interaccion {
-  int id
-  date fecha
-  string tipo
-}
-
-class Comunicacion {
-  string medio
-  string mensaje
+  +subirDocumentos()
 }
 
 Usuario "1" --> "1" Perfil
 Usuario "*" --> "*" Rol
 Usuario "1" --> "*" Inscripcion
 
-Evento "*" --> "1" Categoria
 Evento "1" --> "*" Inscripcion
-
 Inscripcion "1" --> "1" Solicitud
 Solicitud "1" --> "*" Documento
-
-Lead "1" --> "*" Interaccion
-Interaccion "1" --> "1" Comunicacion
