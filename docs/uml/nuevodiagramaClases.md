@@ -51,10 +51,7 @@ class Documento {
 
 class Pago {
   int idPago
-  int idInscripcion
-  float monto
-  string estado
-  +realizarPago()
+  +imprimirComprobante()
 }
 
 class Capacitador {
