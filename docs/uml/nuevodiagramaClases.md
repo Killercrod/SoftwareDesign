@@ -2,52 +2,76 @@
 classDiagram
 
 class Usuario {
-  int id
-  string email
-  string password
-  +iniciarSesion()
-}
-
-class Perfil {
+  int idUsuario
   string nombre
+  string email
   string telefono
+  string etapa   // Interesado | Participante
+  +iniciarSesion()
+  +registrarse()
 }
 
 class Rol {
-  string nombre
+  int idRol
+  string nombre  // Admin | Capacitador | Usuario
 }
 
 class Evento {
-  int id
+  int idEvento
   string nombre
-  date fecha_inicio
-  date fecha_fin
+  date fechaInicio
+  date fechaFin
+  string descripcion
+  int cupo
   +verificarCupo()
 }
 
 class Inscripcion {
-  int id
+  int idInscripcion
+  int idUsuario
+  int idEvento
   string estado
 }
 
 class Solicitud {
-  int id
+  int idSolicitud
+  int idInscripcion
   string estado
   +validarDatos()
   +registrarSolicitud()
 }
 
 class Documento {
+  int idDocumento
+  int idSolicitud
   string nombre
   string tipo
-  +subirDocumentos()
+  string estado
+  +subirDocumento()
 }
 
-Usuario "1" --> "1" Perfil
-Usuario "*" --> "*" Rol
-Usuario "1" --> "*" Inscripcion
+class Pago {
+  int idPago
+  int idInscripcion
+  float monto
+  string estado
+  +realizarPago()
+}
 
-Evento "1" --> "*" Inscripcion
-Inscripcion "1" --> "1" Solicitud
-Solicitud "1" --> "*" Documento
+class Capacitador {
+  int idCapacitador
+  int idUsuario
+  string informacionFiscal
+  +consultarEventos()
+}
+
+Usuario --> Rol
+Usuario --> Inscripcion
+
+Evento --> Inscripcion
+Inscripcion --> Solicitud
+Solicitud --> Documento
+Inscripcion --> Pago
+
+Evento --> Capacitador
 ```
