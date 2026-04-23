@@ -11,32 +11,29 @@ El sistema tiene como objetivo automatizar y optimizar todo el ciclo de vida de 
 
 
 ---
-## Índice de Documentos
+# Índice de Documentos
 
-- # Bitacoras
-[Cesar Rodriguez](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/Cesar%20Rodriguez)
+- ## Bitacoras
+[Bitácoras](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)
 
-[Ivan Chi](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/IvanChi)
+- ## Metodologia de trabajo
+[Metodologia de trabajo](https://github.com/Killercrod/SoftwareDesign/blob/main/Metodologia%20de%20trabajo.md)
 
-[Mango Espinosa](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/MangoEspinosa)
+- ## Diagramas uml
+[Diagramas](https://github.com/Killercrod/SoftwareDesign/tree/main/Analisis/Diagramas)
 
-[Omar Chim](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/OmarChim)
-
-[Braulio Tello](https://github.com/Killercrod/SoftwareDesign/tree/main/Bitácoras/Tello%20Braulio)
-
-- # Metodologia de trabajo
-[Metodologia de trabajo](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Metodologia%20de%20trabajo.md)
-
-- # Requisitos Funcionales
+- ## Requisitos
+- ### Funcionales
 [Requerimientos Funcionales y Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
 
-[Issues de los Requerimientos Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md)
+[Refinamiento y desglose de RF](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md)
 
-[Bussines process diagram](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Bussines%20process%20diagram.mermaid)
 
-# Requisitos No Funcionales
+- ### No Funcionales
 
 [Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+
+[Refinamiento y desglose de RNF](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
 
 [Requisitos No Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
 
