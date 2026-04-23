@@ -5,7 +5,6 @@ class Usuario {
   int idUsuario
   string nombre
   string email
-  string telefono
   string etapa   // Interesado | Participante
   +iniciarSesion()
   +registrarse()
