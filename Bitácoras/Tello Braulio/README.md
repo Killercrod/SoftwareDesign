@@ -21,3 +21,8 @@ Actividades:
 - Issue #57 Diagrama de Actividades
   ### Adicional
   Propuse cambios para la organización y coordinación entre los integrantes pasando de solo tener un reviewer a tener 3 para mayor agilidad a la hora de revisar trabajo individual y colectivo, de esta manera evitamos atrasos y carga de trabajo individual
+## Segunda semana de trabajo
+Durante las reuniones hemos estado interpretanto las retroalimentacion de los weeklys, por lo que hemos cambiado los diagramas importantes que nos sirven para poder terminar de definir el diseño, por mi parte he cambiado los de secuencias, business process y clases (este ultimo solo de retroalimentacion, no cambios explicitos)
+También he agregado y definido informacion importante que está escrita y plasmada en la carpeta de documents aquí mismo en mi bitácora
+Estoy encargado también de realizar los últimos diagramas de secuencias de las actividades más importantes y tener concordancia logica con el diagrama de clases y el de actividades (Business Process)
+También defini el flujo completo y atributos de el BP.
