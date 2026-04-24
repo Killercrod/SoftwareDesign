@@ -27,10 +27,7 @@
 ### Flujo de Actividades [Diagrama de Actividades]
 ![Diagrama UML](./images/flujohappypath.png)
 ### Flujo de Secuencias [Diagramas de Secuencias]
-secuencias lo abarca
-### Interesados [Diagrama Inscripción]  
-secuencias lo abarca
-### Participantes [Diagrama "Mis Eventos"]  
+ 
 ### Flujo de Clases [Diagrama de clases]  
 
 ```mermaid
