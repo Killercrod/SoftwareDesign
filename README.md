@@ -64,4 +64,4 @@ Hemos seleccionado el **Módulo de Gestión de Usuarios** como punto de partida 
 
 Esta elección estratégica nos permitirá entregar valor tangible en un plazo razonable, establecer una arquitectura robusta y escalable, y generar aprendizajes que faciliten el abordaje posterior de los módulos restantes.
 
-
+![Diagrama UML](./images/flujohappypath.png)
