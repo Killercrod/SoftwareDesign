@@ -174,7 +174,7 @@ Representa el proceso de registro del usuario en un evento específico y almacen
 La clase Solicitud representa la validación del proceso de inscripción.
 Se utiliza para revisar los datos del usuario y gestionar la aprobación o rechazo de la inscripción. También permite registrar formalmente la solicitud.
 
-- ** Documento** : 
+- **Documento** : 
 La clase Documento almacena los archivos que el usuario debe subir como parte del proceso de inscripción.
 Incluye información como el tipo de documento, el nombre del archivo y su estado de validación.
 
