@@ -25,6 +25,7 @@
   - Atributos de calidad del sistema  
 ## Atributos del sistema   
 ### Flujo de Actividades [Diagrama de Actividades]
+![Diagrama UML](./images/flujohappypath.png)
 ### Flujo de Secuencias [Diagramas de Secuencias]
 ### Interesados [Diagrama Inscripción]  
 ### Participantes [Diagrama "Mis Eventos"]  
