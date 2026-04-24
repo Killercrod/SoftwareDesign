@@ -1,5 +1,15 @@
-# Introducción  
-# Objetivo
+# Introducción
+
+El presente proyecto consiste en el desarrollo de un sistema integral de gestión académica y comercial, orientado a optimizar la administración de eventos educativos, así como la captación y gestión de leads. La plataforma centraliza en un solo entorno la gestión de capacitaciones, cursos y diplomados, permitiendo una mejor organización de los procesos y una mayor eficiencia operativa.
+
+El sistema se estructura en tres módulos principales: gestión de eventos, gestión de usuarios y gestión de ventas. A través de estos, se facilita la creación y administración de programas académicos, el manejo de capacitadores y participantes, y la automatización de la captación de prospectos desde fuentes externas como plataformas publicitarias y bolsas de trabajo.
+
+Asimismo, la solución cubre todo el ciclo de vida del usuario, desde su registro inicial como interesado, pasando por el proceso de inscripción con validación de documentos y pagos, hasta su participación en los eventos y la generación de constancias. De esta manera, se proporciona una herramienta completa que integra tanto los aspectos académicos como comerciales de la institución.
+
+#  Objetivo
+
+Diseñar e implementar un sistema integral que permita gestionar de manera eficiente los eventos educativos, los usuarios y la captación de leads, automatizando los procesos de inscripción, validación y seguimiento, con el fin de mejorar la organización operativa, optimizar la conversión de prospectos y brindar una experiencia completa al usuario durante todo su ciclo de participación.
+
 --- 
 # Flujo de trabajo
 - Archivos de flujo  
