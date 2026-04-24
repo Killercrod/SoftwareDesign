@@ -149,54 +149,57 @@ Inscripcion --> Pago
 Evento --> Capacitador
 ```
 
-### Componentes y Dependencias (RNF.md)  
+### Explicación del modelo de clases
+Este sistema está diseñado para gestionar eventos de capacitación, permitiendo la inscripción de usuarios, la validación de requisitos, la asignación de capacitadores y el registro de pagos.
+A continuación se explica cada clase y su función dentro del sistema.
+
+- **Usuario**  :
+La clase Usuario representa a las personas que interactúan con el sistema.
+Contiene información básica como el identificador, nombre y correo electrónico. También incluye un atributo que indica la etapa del usuario, la cual puede ser interesado o participante.
+Esta clase permite realizar acciones como iniciar sesión y registrarse en el sistema.
+
+- **Rol** : 
+La clase Rol define el tipo de acceso que tiene un usuario dentro del sistema.
+Permite clasificar a los usuarios en tres categorías principales: administrador, capacitador y usuario. Esto permite controlar los permisos y funcionalidades disponibles para cada tipo de usuario.
+
+- **Evento** : 
+La clase Evento representa las capacitaciones disponibles en el sistema.
+Contiene información como el nombre del evento, fechas, descripción y el cupo máximo de participantes. Incluye una funcionalidad para verificar la disponibilidad de cupo antes de permitir nuevas inscripciones.
+
+- **Inscripción** : 
+La clase Inscripción es la entidad que relaciona a un usuario con un evento.
+Representa el proceso de registro del usuario en un evento específico y almacena el estado de la inscripción, como pendiente, aprobada o rechazada.
+
+- **Solicitud** : 
+La clase Solicitud representa la validación del proceso de inscripción.
+Se utiliza para revisar los datos del usuario y gestionar la aprobación o rechazo de la inscripción. También permite registrar formalmente la solicitud.
+
+- ** Documento** : 
+La clase Documento almacena los archivos que el usuario debe subir como parte del proceso de inscripción.
+Incluye información como el tipo de documento, el nombre del archivo y su estado de validación.
+
+- **Pago** : 
+La clase Pago representa la transacción económica asociada a una inscripción.
+Se encarga de registrar el pago realizado por el usuario y permite la generación del comprobante correspondiente.
+
+- **Capacitador** : 
+La clase Capacitador representa a la persona encargada de impartir los eventos.
+Está vinculada a un usuario del sistema y contiene información adicional como datos fiscales. También permite consultar los eventos asignados.
+
+Relaciones generales del sistema:
+  - Un usuario tiene un rol asignado.
+  - Un usuario puede tener múltiples inscripciones.
+  - Un evento puede tener múltiples usuarios inscritos.
+  - Cada inscripción genera una solicitud.
+  - Una solicitud puede incluir documentos.
+  - Una inscripción puede tener un pago asociado.
+  - Un capacitador puede estar asignado a múltiples eventos.
+
+Componentes y Dependencias (RNF.md)  [Pendiente linkear]
+
 ### Arquitectura  
   - Diagrama de Arquitectura  
   - Diagrama de despliegue
 ### Base de Datos  
 
-# Explicación del modelo de clases
-Este sistema está diseñado para gestionar eventos de capacitación, permitiendo la inscripción de usuarios, la validación de requisitos, la asignación de capacitadores y el registro de pagos.
-A continuación se explica cada clase y su función dentro del sistema.
 
-# Usuario
-La clase Usuario representa a las personas que interactúan con el sistema.
-Contiene información básica como el identificador, nombre y correo electrónico. También incluye un atributo que indica la etapa del usuario, la cual puede ser interesado o participante.
-Esta clase permite realizar acciones como iniciar sesión y registrarse en el sistema.
-
-# Rol
-La clase Rol define el tipo de acceso que tiene un usuario dentro del sistema.
-Permite clasificar a los usuarios en tres categorías principales: administrador, capacitador y usuario. Esto permite controlar los permisos y funcionalidades disponibles para cada tipo de usuario.
-
-# Evento
-La clase Evento representa las capacitaciones disponibles en el sistema.
-Contiene información como el nombre del evento, fechas, descripción y el cupo máximo de participantes. Incluye una funcionalidad para verificar la disponibilidad de cupo antes de permitir nuevas inscripciones.
-
-# Inscripción
-La clase Inscripción es la entidad que relaciona a un usuario con un evento.
-Representa el proceso de registro del usuario en un evento específico y almacena el estado de la inscripción, como pendiente, aprobada o rechazada.
-
-# Solicitud
-La clase Solicitud representa la validación del proceso de inscripción.
-Se utiliza para revisar los datos del usuario y gestionar la aprobación o rechazo de la inscripción. También permite registrar formalmente la solicitud.
-
-# Documento
-La clase Documento almacena los archivos que el usuario debe subir como parte del proceso de inscripción.
-Incluye información como el tipo de documento, el nombre del archivo y su estado de validación.
-
-# Pago
-La clase Pago representa la transacción económica asociada a una inscripción.
-Se encarga de registrar el pago realizado por el usuario y permite la generación del comprobante correspondiente.
-
-# Capacitador
-La clase Capacitador representa a la persona encargada de impartir los eventos.
-Está vinculada a un usuario del sistema y contiene información adicional como datos fiscales. También permite consultar los eventos asignados.
-
-Relaciones generales del sistema
-Un usuario tiene un rol asignado.
-Un usuario puede tener múltiples inscripciones.
-Un evento puede tener múltiples usuarios inscritos.
-Cada inscripción genera una solicitud.
-Una solicitud puede incluir documentos.
-Una inscripción puede tener un pago asociado.
-Un capacitador puede estar asignado a múltiples eventos.
