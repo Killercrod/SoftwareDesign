@@ -161,7 +161,19 @@ erDiagram
     EVENTO ||--o{ PAGO : recibe
     USUARIO ||--|| CAPACITADOR : es
 ```
+## Diagrama Entidad-Relación
 
+El diagrama representa la estructura de datos del sistema de gestión de eventos y capacitaciones. Se compone de 11 entidades relacionadas entre sí.
+
+### Entidades centrales y su función
+
+`USUARIO` es el núcleo del sistema, se conecta con casi todo. Un usuario puede tener múltiples solicitudes, códigos de acceso y un rol asignado. `EVENTO` es la otra entidad central, ya que agrupa las solicitudes, los documentos requeridos, los recursos y los capacitadores. `SOLICITUD` actúa como puente entre un usuario y un evento, y de ella se desprenden los documentos cargados y el pago. `CAPACITADOR` extiende a `USUARIO`, es decir, todo capacitador es también un usuario del sistema pero con información fiscal adicional y eventos asignados.
+
+Las entidades de soporte son `CODIGO_ACCESO` para la autenticación por correo, `DOCUMENTO_REQUERIDO` para definir qué documentos exige cada evento, `DOCUMENTO` para los archivos que sube el usuario, `PAGO` para el estado financiero de cada solicitud, `RECURSO` para los materiales del evento y `USUARIO_ROL` como tabla intermedia que gestiona los roles.
+
+### Claves PK y FK
+
+Cada entidad tiene un campo marcado como `PK` — por ejemplo `idUsuario`, `idEvento`, `idSolicitud` — que identifica de forma única cada registro. Los campos marcados como `FK` son los que crean las conexiones, por ejemplo `SOLICITUD` tiene `idUsuario FK` e `idEvento FK`, lo que significa que cada solicitud sabe exactamente a qué usuario pertenece y a qué evento apunta, sin duplicar su información sino referenciándola. La tabla `USUARIO_ROL` es un caso especial donde ambos campos son FK, porque su único propósito es vincular usuarios con roles sin datos propios.
 
 ### Flujo de Actividades [Diagrama de Actividades]
 ![Diagrama UML](./images/flujohappypath.png)
