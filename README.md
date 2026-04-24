@@ -63,5 +63,3 @@ Hemos seleccionado el **Módulo de Gestión de Usuarios** como punto de partida 
 5. **Documentación existente**: Contamos con una base sólida de casos de uso y requisitos definidos en el repositorio original, así como un avance documentado por nuestro equipo, lo que nos permite progresar de manera ordenada y consistente.
 
 Esta elección estratégica nos permitirá entregar valor tangible en un plazo razonable, establecer una arquitectura robusta y escalable, y generar aprendizajes que faciliten el abordaje posterior de los módulos restantes.
-
-![Diagrama UML](./images/flujohappypath.png)
