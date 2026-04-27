@@ -254,6 +254,8 @@ Inscripcion --> Pago
 
 Evento --> Capacitador
 ```
+### Diagrama de clases.
+El diagrama de clases muestra la estructura del sistema y las relaciones entre usuarios, eventos, inscripciones y pagos.
 
 ### Explicación del modelo de clases
 Este sistema está diseñado para gestionar eventos de capacitación, permitiendo la inscripción de usuarios, la validación de requisitos, la asignación de capacitadores y el registro de pagos.
