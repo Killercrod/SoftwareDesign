@@ -1,4 +1,4 @@
-'''mermaid
+```mermaid
 sequenceDiagram
     participant U as Usuario
     participant UC as UsuarioController
@@ -67,5 +67,4 @@ sequenceDiagram
     UC->>IS: confirmarPagoYActivacion()
     IS-->>UC: validaciónOK
     UC-->>U: mostrarContenido
-    ''' 
-    
+```
