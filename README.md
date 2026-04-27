@@ -69,11 +69,11 @@ CU-06: Acceder a Contenido de Eventos Actores. Actores: Usuario Descripción: El
 Los RNFs especifican los estándares y cualidades que debe cumplir un sistema para funcionar de manera eficaz, centrándose en cómo Un sistema opera en lugar de Lo que Así es.
 
 ## [Refinamiento y Desglose de los RNFs](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
-- RNF-01 — Autenticación basada en tokens.
+RNF-01 — Autenticación basada en tokens.
 
 El sistema deberá utilizar autenticación mediante tokens JWT para validar las sesiones de los usuarios con el propósito de controlar el acceso al sistema mediante sesiones verificables y limitar el tiempo de uso cuando no existe actividad.
 
-- RNF-02 — Carga de archivos.
+RNF-02 — Carga de archivos.
 
 El sistema deberá permitir subir documentos asociados a los usuarios con el propósito de permitir que los usuarios carguen documentos necesarios para validación o registro dentro del sistema.
 
