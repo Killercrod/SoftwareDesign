@@ -65,7 +65,47 @@ CU-05: Reenviar Solicitud. Actores: Usuario Descripción: El usuario podrá edit
 
 CU-06: Acceder a Contenido de Eventos Actores. Actores: Usuario Descripción: El usuario podrá acceder a los eventos en los que ha sido aprobado, visualizando sus detalles y recursos disponibles. Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud aprobada para al menos un evento.
 
-### No funcionales  
+# No funcionales
+Los RNFs especifican los estándares y cualidades que debe cumplir un sistema para funcionar de manera eficaz, centrándose en cómo Un sistema opera en lugar de Lo que Así es.
+
+## [Refinamiento y Desglose de los RNFs](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
+- RNF-01 — Autenticación basada en tokens.
+
+El sistema deberá utilizar autenticación mediante tokens JWT para validar las sesiones de los usuarios con el propósito de controlar el acceso al sistema mediante sesiones verificables y limitar el tiempo de uso cuando no existe actividad.
+
+- RNF-02 — Carga de archivos.
+
+El sistema deberá permitir subir documentos asociados a los usuarios con el propósito de permitir que los usuarios carguen documentos necesarios para validación o registro dentro del sistema.
+
+RNF-03 — Recuperación del módulo Mis Eventos.
+
+El sistema deberá permitir restablecer la funcionalidad del módulo Mis Eventos después de una falla con el propósito de reducir el tiempo durante el cual el módulo no está disponible.
+
+RNF-04 — Arquitectura en capas.
+
+El sistema deberá implementar una arquitectura en capas compuesta por Controller, Service y Repository con el propósito de separar la lógica de presentación, la lógica de negocio y el acceso a datos.
+
+RNF-05 — Consistencia de interfaz.
+
+Las pantallas del Módulo de Usuarios deberán mantener un diseño uniforme con el propósito de permitir que los usuarios identifiquen las acciones del sistema de forma consistente.
+
+RNF-06 — Validación de formularios.
+
+Los formularios de registro y edición deberán validar la información antes de almacenarla con el propósito de evitar el registro de datos incompletos en el sistema.
+
+RNF-07 — Tiempo de procesamiento de acciones.
+
+El sistema deberá ejecutar las operaciones principales dentro de un tiempo definido con el propósito de garantizar tiempos de respuesta aceptables para los usuarios.
+
+RNF-08 — Validación del formato de correo electrónico (institucional).
+
+El sistema deberá verificar el formato del correo electrónico antes de guardar un registro con el propósito de evitar el almacenamiento de correos electrónicos con formato incorrecto.
+
+RNF-09 — Identificador único de capacitador.
+
+El sistema deberá asignar un identificador numérico único a cada capacitador registrado con el propósito de permitir la identificación de cada usuario dentro del sistema y en la base de datos.
+
+
   - Refinamiento y Desglose  
   - Atributos de calidad del sistema  
 ## Atributos del sistema   
