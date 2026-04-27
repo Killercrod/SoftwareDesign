@@ -105,10 +105,63 @@ RNF-09 — Identificador único de capacitador.
 
 El sistema deberá asignar un identificador numérico único a cada capacitador registrado con el propósito de permitir la identificación de cada usuario dentro del sistema y en la base de datos.
 
+## [Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
 
-  - Refinamiento y Desglose  
-  - Atributos de calidad del sistema  
-## Atributos del sistema   
+Los atributos de calidad del sistema describen cómo se comporta el sistema con base a los requisitos no funcionales y basados en el modelo de calidad definido por el estándar ISO/IEC 25010.
+
+### Rendimiento.
+
+El sistema debe responder a las solicitudes de los usuarios en un tiempo adecuado para garantizar una buena experiencia.
+
+RNFs Necesarios:
+
+- RNF-02: Carga de archivos: El sistema debe gestionar la carga de archivos estableciendo límites de tamaño para evitar sobrecargas en el servidor.
+
+- RNF-07: Tiempo de procesamiento de acciones: El sistema debe garantizar tiempos de respuesta aceptables para las operaciones principales (registro, actualización, eliminación) bajo condiciones normales de carga.
+
+### Seguridad.
+
+El sistema debe proteger la información de los usuarios y evitar accesos no autorizados.
+
+RNFs Ne
+cesarios:
+
+- RNF-01: Autenticación basada en tokens: El sistema debe proteger las credenciales de los usuarios mediante mecanismos de seguridad como tokens JWT.
+
+- RNF-06: Validación de formularios: La validación en cliente y servidor protege la integridad de los datos almacenados, evitando la entrada de información corrupta o malformada.
+
+- RNF-08: Validación del formato de correo electrónico: Previene el almacenamiento de datos con formato incorrecto protegiendo la integridad de la información de contacto.
+
+- RNF-09: Identificador único de capacitador: Asegura la identificación correcta y única de cada usuario dentro del sistema y en la base de datos.
+
+### Usabilidad.
+
+El sistema debe de proporcionar una experiencia de usuario donde cualquiera puede utilizar el sistema sin complicaciones.
+
+RNFs Necesarios:
+
+- RNF-05: Consistencia de interfaz: La interfaz del sistema debe mantener un diseño uniforme para que los usuarios identifiquen acciones de forma consistente.
+
+- RNF-06: Validación de formularios: Evita el registro de datos incompletos manteniendo errores manejables para el usuario.
+
+- RNF-08: Validación del formato de correo electrónico: Mejora la experiencia del usuario al mostrar mensajes claros sobre errores de formato antes de guardar.
+
+### Disponibilidad.
+
+El sistema debe estar disponible para los usuarios la mayor parte del tiempo.
+
+RNFs Necesarios:
+
+- RNF-03: Recuperación del módulo Mis Eventos en la Base de datos: El sistema debe mantenerse disponible para los usuarios durante la mayor parte del tiempo y recuperarse rápidamente tras una falla.
+
+### Mantenibilidad.
+
+El sistema debe permitir modificaciones y mejoras sin afectar otras partes del software.
+
+RNFs Necesarios:
+
+- RNF-04: Arquitectura en capas: El código del sistema debe estar organizado para facilitar futuras modificaciones mediante separación de capas (Controller, Service, Repository).
+   
 ### Diagrama Entidad-Relacion
 
 ```mermaid
