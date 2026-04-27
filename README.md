@@ -305,7 +305,6 @@ Componentes y Dependencias (RNF.md)  [Pendiente linkear]
 
 ### Arquitectura  
   - Diagrama de Arquitectura  
-  - Diagrama de despliegue
-### Base de Datos  
+
 
 
