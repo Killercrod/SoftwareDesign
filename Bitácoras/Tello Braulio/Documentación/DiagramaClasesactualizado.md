@@ -1,10 +1,11 @@
+
+```mermaid
 classDiagram
     namespace Controllers {
         class UsuarioController {
             +consultarInfoEvento()
             +subirDocumentos()
-            +inscribirse(idEvento)
-            +accederMisEventos()
+            
         }
         class CapacitadorController {
             +consultarEventoAsignado()
