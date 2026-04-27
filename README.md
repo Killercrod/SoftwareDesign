@@ -313,7 +313,8 @@ classDiagram
 ```
 
 ### Diagrama de clases.
-El diagrama de clases muestra la estructura del sistema y las relaciones entre usuarios, eventos, inscripciones y pagos.
+El diagrama de clases incluye la arquitectura del sistema, mostrando las entidades clave y su interacción dentro de una estructura modular para gestionar eventos de capacitación.
+
 
 ### Explicación del modelo de clases
 Este sistema está diseñado para gestionar eventos de capacitación, permitiendo la inscripción de usuarios, la validación de requisitos, la asignación de capacitadores y el registro de pagos.
