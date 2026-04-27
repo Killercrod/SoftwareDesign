@@ -177,6 +177,9 @@ Cada entidad tiene un campo marcado como `PK` — por ejemplo `idUsuario`, `idEv
 
 ### Flujo de Actividades [Diagrama de Actividades]
 ![Diagrama UML](./images/flujohappypath.png)
+### Flujo de actividades.
+El diagrama de actividades y flujo describe el proceso o flujo de trabajo dentro del sistema, mostrando las acciones, decisiones y el orden en que se ejecutan. Representa cómo se desarrollan las actividades y las transiciones entre ellas para alcanzar un objetivo específico.
+
 ### Flujo de Secuencias [Diagramas de Secuencias]
  
 ### Flujo de Clases [Diagrama de clases]  
