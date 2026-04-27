@@ -302,8 +302,8 @@ Relaciones generales del sistema:
   - Un usuario puede tener múltiples inscripciones.
   - Un evento puede tener múltiples usuarios inscritos.
   - Cada inscripción genera una solicitud.
-  - Una solicitud puede incluir documentos.
-  - Una inscripción puede tener un pago asociado.
+  - Una solicitud debe incluir documentos.
+  - Una inscripción debe tener un pago asociado.
   - Un capacitador puede estar asignado a múltiples eventos.
 
 [Componentes y Dependencias](./Analisis/Requerimientos/No%20funcionales/Componentes%20o%20dependencias%20a%20considerar%20siguiendo%20los%20RNF.md)
