@@ -301,7 +301,7 @@ Relaciones generales del sistema:
   - Una inscripción puede tener un pago asociado.
   - Un capacitador puede estar asignado a múltiples eventos.
 
-Componentes y Dependencias (RNF.md)  [Pendiente linkear]
+[Componentes y Dependencias](./Analisis/Requerimientos/No%20funcionales/Componentes%20o%20dependencias%20a%20considerar%20siguiendo%20los%20RNF.md)
 
 ### Arquitectura  
   - Diagrama de Arquitectura  
