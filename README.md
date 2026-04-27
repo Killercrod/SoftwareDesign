@@ -311,7 +311,8 @@ classDiagram
     Solicitud  -->  Documento
     Capacitador  -->  Usuario
 ```
-```### Diagrama de clases.
+```
+### Diagrama de clases.
 El diagrama de clases muestra la estructura del sistema y las relaciones entre usuarios, eventos, inscripciones y pagos.
 
 ### Explicación del modelo de clases
