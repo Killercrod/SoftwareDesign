@@ -5,7 +5,8 @@ classDiagram
         class UsuarioController {
             +consultarInfoEvento()
             +subirDocumentos()
-            
+            +inscribirse(idEvento)
+            +accederMisEventos()
         }
         class CapacitadorController {
             +consultarEventoAsignado()
