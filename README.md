@@ -15,19 +15,20 @@ Diseñar e implementar un sistema integral que permita gestionar de manera efici
 - Archivos de flujo  
 - Bitácoras  
 - Problemática  
-- Requisitos  
+- Requisitos
   - Funcionales  
   - No funcionales  
-- Atributos del Sistema  
+- Atributos del Sistema 
   - Actividades  
   - Secuencias  
   - Clases  
-  - Arquitectura  
+  - [Arquitectura](#arquitectura)  
   - Base de datos  
   - Explicación del trabajo / metodología / reuniones / bitácoras  
 --- 
 # Problemática  
-## Requisitos  
+## Requisitos 
+
 Los requisitos es una fase crucial en el desarrollo de software, se identifican las necesidades del cliente, que el sistema se construya correctamente y cumpla con los objetivos previstos.
 
 Requisitos funcionales: Defina qué debe hacer el sistema (características y operaciones).
@@ -105,7 +106,9 @@ RNF-09 — Identificador único de capacitador.
 
 El sistema deberá asignar un identificador numérico único a cada capacitador registrado con el propósito de permitir la identificación de cada usuario dentro del sistema y en la base de datos.
 
-## [Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+## [Atributos de Calidad del Sistema]
+(https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+
 
 Los atributos de calidad del sistema describen cómo se comporta el sistema con base a los requisitos no funcionales y basados en el modelo de calidad definido por el estándar ISO/IEC 25010.
 
@@ -531,6 +534,8 @@ Relaciones generales del sistema:
 [Componentes y Dependencias](./Analisis/Requerimientos/No%20funcionales/Componentes%20o%20dependencias%20a%20considerar%20siguiendo%20los%20RNF.md)
 
 ### Arquitectura
+[volver al índice](#flujo-de-trabajo)
+
 - Diagrama de Arquitectura
 ```mermaid
 classDiagram
