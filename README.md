@@ -1,67 +1,692 @@
+# Introducción a la problematica 
 
-# Introducción al Proyecto ECFCA
+El presente proyecto consiste en el desarrollo de un sistema integral de gestión académica y comercial, orientado a optimizar la administración de eventos educativos, así como la captación y gestión de leads. La plataforma centraliza en un solo entorno la gestión de capacitaciones, cursos y diplomados, permitiendo una mejor organización de los procesos y una mayor eficiencia operativa.
 
-El **Sistema de Educación Continua para la FCA-UADY (ECFCA)** es una plataforma integral de gestión académica y comercial desarrollada en colaboración entre la Facultad de Matemáticas (FMAT) y la Facultad de Contaduría y Administración (FCA) de la Universidad Autónoma de Yucatán.
+El sistema se estructura en tres módulos principales: gestión de eventos, gestión de usuarios y gestión de ventas. A través de estos, se facilita la creación y administración de programas académicos, el manejo de capacitadores y participantes, y la automatización de la captación de prospectos desde fuentes externas como plataformas publicitarias y bolsas de trabajo.
 
-El sistema tiene como objetivo automatizar y optimizar todo el ciclo de vida de los eventos educativos ofrecidos por la unidad de Educación Continua, incluyendo cursos, diplomados y capacitaciones. La plataforma se estructura en tres pilares fundamentales:
+Asimismo, la solución cubre todo el ciclo de vida del usuario, desde su registro inicial como interesado, pasando por el proceso de inscripción con validación de documentos y pagos, hasta su participación en los eventos y la generación de constancias. De esta manera, se proporciona una herramienta completa que integra tanto los aspectos académicos como comerciales de la institución.
 
-1. **Gestión de Ventas (CRM)**: Captación de leads desde fuentes externas (Meta Ads, bolsa de trabajo UADY) y seguimiento de oportunidades comerciales.
-2. **Gestión de Eventos**: Administración de programas académicos, generación de constancias y reportes.
-3. **Gestión de Usuarios**: Manejo integral de participantes, capacitadores y personal administrativo.
+#  Objetivo
 
-
----
-# Índice de Documentos
-
-- ## Bitacoras
-[Bitácoras](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)
-
-- ## Metodologia de trabajo
-[Metodologia de trabajo](https://github.com/Killercrod/SoftwareDesign/blob/main/Metodologia%20de%20trabajo.md)
-
-- ## Diagramas uml
-[Diagramas](https://github.com/Killercrod/SoftwareDesign/tree/main/Analisis/Diagramas)
-
-- ## Requisitos
-- ### Funcionales
-[Requerimientos Funcionales y Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
-
-[Refinamiento y desglose de RF](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md)
+Diseñar e implementar un sistema integral que permita gestionar de manera eficiente los eventos educativos, los usuarios y la captación de leads, automatizando los procesos de inscripción, validación y seguimiento, con el fin de mejorar la organización operativa, optimizar la conversión de prospectos y brindar una experiencia completa al usuario durante todo su ciclo de participación.
 
 
-- ### No Funcionales
+--- 
+# Flujo de trabajo
+- [Metodología de trabajo](#metodologia-de-trabajo)
+- [Bitácoras de cada integrante](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)   
+- Requisitos
+  - [Funcionales](#funcionales)  
+  - [No funcionales](#no-funcionales)  
+- Atributos del Sistema
+  - [Atributos de calidad](#atributos-del-sistema)
+  - [Actividades](#flujo-de-actividades)  
+  - [Secuencias](#flujo-de-secuencias)  
+  - [Clases](#flujo-de-clases)  
+  - [Arquitectura](#arquitectura)  
+  - Base de datos 
+--- 
 
-[Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+# Metodologia de trabajo 
+[volver al índice](#flujo-de-trabajo)
+  
+# Requisitos 
 
-[Refinamiento y desglose de RNF](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
+Los requisitos es una fase crucial en el desarrollo de software, se identifican las necesidades del cliente, que el sistema se construya correctamente y cumpla con los objetivos previstos.
 
-[Requisitos No Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/main/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
+Requisitos funcionales: Defina qué debe hacer el sistema (características y operaciones).
 
-# Introducción al Proyecto ECFCA
----
+Requisitos no funcionales: Definan cómo debe funcionar el sistema (calidad, rendimiento y limitaciones).
 
-# Módulo de Gestión de Usuarios
+## Funcionales
 
-El **Módulo de Gestión de Usuarios** constituye el núcleo del sistema en lo que respecta a la administración de personas que interactúan con la plataforma. Abarca desde el registro y autenticación del público general, pasando por la gestión de participantes inscritos en eventos, hasta la administración especializada de capacitadores y los procesos de validación documental realizados por el personal administrativo.
+[volver al índice](#flujo-de-trabajo)
 
-Este módulo facilita todo el ciclo de vida del usuario dentro del sistema:
-- **Para el público general**: registro, solicitud de inscripción, carga de documentos, consulta de estatus y acceso a eventos.
-- **Para capacitadores**: gestión de su perfil, información fiscal y consulta de eventos asignados.
-- **Para el staff y coordinación**: validación de documentos, administración de perfiles y gestión de capacitadores.
+Los [requisitos funcionales](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md) especifican comportamientos observables y procesos a llevar a cabo que debe proveer el software.
+Cada requerimiento es interpretable de una sola manera y testeables, es decir, debe con su cumplimiento en el programa.
 
----
-Hemos seleccionado el **Módulo de Gestión de Usuarios** como punto de partida para nuestro análisis y desarrollo por las siguientes razones:
+RF-01 (Gestión de Perfil)
 
-1. **Es el módulo más práctico y mejor delimitado**: Sus fronteras funcionales están claramente definidas, lo que facilita un análisis profundo y acotado sin depender críticamente de los otros módulos para su operación básica.
+RF-02 (Solicitud de Inscripción)
 
-2. **Constituye la base del sistema**: Todos los demás módulos (Eventos y Ventas) dependen de la existencia de usuarios bien gestionados. Sin una sólida administración de participantes y capacitadores, los módulos de eventos y ventas carecerían de sentido.
+RF-03 (Carga de Documentación)
 
-3. **Interacción temprana con actores clave**: Permite validar requisitos con todos los tipos de usuario (público general, staff, capacitadores) desde etapas tempranas, asegurando que las necesidades fundamentales están cubiertas.
+RF-04 (Consulta de Estatus)
 
-4. **Alta cohesión y bajo acoplamiento**: Aunque se integra con otros módulos, sus funcionalidades centrales (registro, autenticación, gestión de perfiles) pueden desarrollarse de manera independiente, reduciendo riesgos de interdependencias complejas al inicio del proyecto.
+RF-05 (Reenvío de Solicitudes)
 
-5. **Documentación existente**: Contamos con una base sólida de casos de uso y requisitos definidos en el repositorio original, así como un avance documentado por nuestro equipo, lo que nos permite progresar de manera ordenada y consistente.
+RF-06 (Acceso a Contenido)
 
-Esta elección estratégica nos permitirá entregar valor tangible en un plazo razonable, establecer una arquitectura robusta y escalable, y generar aprendizajes que faciliten el abordaje posterior de los módulos restantes.
+## [Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
+Un caso de uso explica cómo los usuarios interactúan con un producto o sistema. Describe el flujo de entradas del usuario estableciendo caminos exitosos y fallidos para alcanzar los objetivos. Esto permite a los equipos de producto comprender mejor qué hace un sistema, cómo funciona y por qué ocurren los errores.
+
+CU-01: Iniciar Sesión y Gestionar Datos Actores: Usuario Descripción: El usuario deberá registrarse con su correo y contraseña además de poder entrar a la configuración de su perfil, ver y gestionar sus datos personales. Pre-Condiciones: El usuario ya debe tener una cuenta creada.
+
+CU-02: Seleccionar Evento y Enviar Solicitud de Inscripción. Actores: Usuario Descripción: El usuario podrá navegar entre los distintos eventos que oferta la plataforma, revisar detalles sobre los eventos de su interés y enviar una solicitud de inscripción al evento seleccionado. Pre-Condiciones: El usuario debe haberse registrado en el sistema con su correo y contraseña para acceder a la plataforma. 
+
+CU-03: Carga de Documentación. Actores: Usuario. Pre-Condiciones: El usuario debe haberse inscrito al evento de su interés.
+
+CU-04: Consultar Estatus de Solicitudes. Actores: Usuario Descripción: El usuario podrá visualizar una lista de sus solicitudes que incluya en ella: su estado actual, detalles descriptivos de cada una, documentos y estado de pago Pre-Condiciones: El usuario debe haber iniciado sesión y contar con al menos una solicitud registrada.
+
+CU-05: Reenviar Solicitud. Actores: Usuario Descripción: El usuario podrá editar una solicitud previamente rechazada o incompleta y reenviarla para su validación. Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud en estado "rechazada" o "información incompleta".
+
+CU-06: Acceder a Contenido de Eventos Actores. Actores: Usuario Descripción: El usuario podrá acceder a los eventos en los que ha sido aprobado, visualizando sus detalles y recursos disponibles. Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud aprobada para al menos un evento.
+
+## No funcionales
+[volver al índice](#flujo-de-trabajo)
+
+Los [requisitos no funcionales](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md) especifican los estándares y cualidades que debe cumplir un sistema para funcionar de manera eficaz, centrándose en cómo Un sistema opera en lugar de Lo que Así es.
+
+## Refinamiento y Desglose de los RNFs
+RNF-01 — Autenticación basada en tokens.
+
+El sistema deberá utilizar autenticación mediante tokens JWT para validar las sesiones de los usuarios con el propósito de controlar el acceso al sistema mediante sesiones verificables y limitar el tiempo de uso cuando no existe actividad.
+
+RNF-02 — Carga de archivos.
+
+El sistema deberá permitir subir documentos asociados a los usuarios con el propósito de permitir que los usuarios carguen documentos necesarios para validación o registro dentro del sistema.
+
+RNF-03 — Recuperación del módulo Mis Eventos.
+
+El sistema deberá permitir restablecer la funcionalidad del módulo Mis Eventos después de una falla con el propósito de reducir el tiempo durante el cual el módulo no está disponible.
+
+RNF-04 — Arquitectura en capas.
+
+El sistema deberá implementar una arquitectura en capas compuesta por Controller, Service y Repository con el propósito de separar la lógica de presentación, la lógica de negocio y el acceso a datos.
+
+RNF-05 — Consistencia de interfaz.
+
+Las pantallas del Módulo de Usuarios deberán mantener un diseño uniforme con el propósito de permitir que los usuarios identifiquen las acciones del sistema de forma consistente.
+
+RNF-06 — Validación de formularios.
+
+Los formularios de registro y edición deberán validar la información antes de almacenarla con el propósito de evitar el registro de datos incompletos en el sistema.
+
+RNF-07 — Tiempo de procesamiento de acciones.
+
+El sistema deberá ejecutar las operaciones principales dentro de un tiempo definido con el propósito de garantizar tiempos de respuesta aceptables para los usuarios.
+
+RNF-08 — Validación del formato de correo electrónico (institucional).
+
+El sistema deberá verificar el formato del correo electrónico antes de guardar un registro con el propósito de evitar el almacenamiento de correos electrónicos con formato incorrecto.
+
+RNF-09 — Identificador único de capacitador.
+
+El sistema deberá asignar un identificador numérico único a cada capacitador registrado con el propósito de permitir la identificación de cada usuario dentro del sistema y en la base de datos.
+
+# Atributos del sistema
+[volver al índice](#flujo-de-trabajo)
+
+## [Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+
+
+Los atributos de calidad del sistema describen cómo se comporta el sistema con base a los requisitos no funcionales y basados en el modelo de calidad definido por el estándar ISO/IEC 25010.
+
+### Rendimiento.
+
+El sistema debe responder a las solicitudes de los usuarios en un tiempo adecuado para garantizar una buena experiencia.
+
+RNFs Necesarios:
+
+- RNF-02: Carga de archivos: El sistema debe gestionar la carga de archivos estableciendo límites de tamaño para evitar sobrecargas en el servidor.
+
+- RNF-07: Tiempo de procesamiento de acciones: El sistema debe garantizar tiempos de respuesta aceptables para las operaciones principales (registro, actualización, eliminación) bajo condiciones normales de carga.
+
+### Seguridad.
+
+El sistema debe proteger la información de los usuarios y evitar accesos no autorizados.
+
+RNFs Ne
+cesarios:
+
+- RNF-01: Autenticación basada en tokens: El sistema debe proteger las credenciales de los usuarios mediante mecanismos de seguridad como tokens JWT.
+
+- RNF-06: Validación de formularios: La validación en cliente y servidor protege la integridad de los datos almacenados, evitando la entrada de información corrupta o malformada.
+
+- RNF-08: Validación del formato de correo electrónico: Previene el almacenamiento de datos con formato incorrecto protegiendo la integridad de la información de contacto.
+
+- RNF-09: Identificador único de capacitador: Asegura la identificación correcta y única de cada usuario dentro del sistema y en la base de datos.
+
+### Usabilidad.
+
+El sistema debe de proporcionar una experiencia de usuario donde cualquiera puede utilizar el sistema sin complicaciones.
+
+RNFs Necesarios:
+
+- RNF-05: Consistencia de interfaz: La interfaz del sistema debe mantener un diseño uniforme para que los usuarios identifiquen acciones de forma consistente.
+
+- RNF-06: Validación de formularios: Evita el registro de datos incompletos manteniendo errores manejables para el usuario.
+
+- RNF-08: Validación del formato de correo electrónico: Mejora la experiencia del usuario al mostrar mensajes claros sobre errores de formato antes de guardar.
+
+### Disponibilidad.
+
+El sistema debe estar disponible para los usuarios la mayor parte del tiempo.
+
+RNFs Necesarios:
+
+- RNF-03: Recuperación del módulo Mis Eventos en la Base de datos: El sistema debe mantenerse disponible para los usuarios durante la mayor parte del tiempo y recuperarse rápidamente tras una falla.
+
+### Mantenibilidad.
+
+El sistema debe permitir modificaciones y mejoras sin afectar otras partes del software.
+
+RNFs Necesarios:
+
+- RNF-04: Arquitectura en capas: El código del sistema debe estar organizado para facilitar futuras modificaciones mediante separación de capas (Controller, Service, Repository).
+   
+### Diagrama Entidad-Relacion
+
+```mermaid
+erDiagram
+    USUARIO {
+        int idUsuario PK
+        string nombre
+        string email
+        string etapa
+        datetime fechaCreacion
+    }
+
+    ROL {
+        int idRol PK
+        string nombre
+    }
+
+    USUARIO_ROL {
+        int idUsuario FK
+        int idRol FK
+    }
+
+    CODIGO_ACCESO {
+        int idCodigo PK
+        int idUsuario FK
+        string codigo
+        datetime fechaExpiracion
+        boolean usado
+    }
+
+    EVENTO {
+        int idEvento PK
+        string nombre
+        date fechaInicio
+        date fechaFin
+        string descripcion
+        int cupo
+        string estado
+    }
+
+    DOCUMENTO_REQUERIDO {
+        int idDocRequerido PK
+        int idEvento FK
+        string nombre
+        string formatosPermitidos
+        boolean obligatorio
+    }
+
+    SOLICITUD {
+        int idSolicitud PK
+        int idUsuario FK
+        int idEvento FK
+        string estado
+        datetime fechaCreacion
+        datetime fechaActualizacion
+    }
+
+    DOCUMENTO {
+        int idDocumento PK
+        int idSolicitud FK
+        int idDocRequerido FK
+        string nombre
+        string tipo
+        float tamano
+        string rutaArchivo
+        string estado
+        datetime fechaSubida
+    }
+
+    PAGO {
+        int idPago PK
+        int idSolicitud FK
+    }
+
+    CAPACITADOR {
+        int idCapacitador PK
+        int idUsuario FK
+        string informacionFiscal
+    }
+
+    USUARIO ||--o{ PAGO : genera
+    EVENTO ||--o{ SOLICITUD : recibe
+    USUARIO ||--o{ USUARIO_ROL : asignado_a
+    ROL ||--o{ USUARIO_ROL : contiene
+    USUARIO ||--o{ CODIGO_ACCESO : tiene
+    EVENTO ||--o{ DOCUMENTO_REQUERIDO : contiene
+    DOCUMENTO_REQUERIDO ||--o{ DOCUMENTO : define
+    SOLICITUD ||--o{ DOCUMENTO : incluye
+    SOLICITUD ||--o{ PAGO : genera
+    EVENTO ||--o{ PAGO : recibe
+    USUARIO ||--|| CAPACITADOR : es
+```
+## Diagrama Entidad-Relación
+
+El diagrama representa la estructura de datos del sistema de gestión de eventos y capacitaciones. Se compone de 11 entidades relacionadas entre sí.
+
+### Entidades centrales y su función
+
+`USUARIO` es el núcleo del sistema, se conecta con casi todo. Un usuario puede tener múltiples solicitudes, códigos de acceso y un rol asignado. `EVENTO` es la otra entidad central, ya que agrupa las solicitudes, los documentos requeridos, los recursos y los capacitadores. `SOLICITUD` actúa como puente entre un usuario y un evento, y de ella se desprenden los documentos cargados y el pago. `CAPACITADOR` extiende a `USUARIO`, es decir, todo capacitador es también un usuario del sistema pero con información fiscal adicional y eventos asignados.
+
+Las entidades de soporte son `CODIGO_ACCESO` para la autenticación por correo, `DOCUMENTO_REQUERIDO` para definir qué documentos exige cada evento, `DOCUMENTO` para los archivos que sube el usuario, `PAGO` para el estado financiero de cada solicitud, `RECURSO` para los materiales del evento y `USUARIO_ROL` como tabla intermedia que gestiona los roles.
+
+### Claves PK y FK
+
+Cada entidad tiene un campo marcado como `PK` — por ejemplo `idUsuario`, `idEvento`, `idSolicitud` — que identifica de forma única cada registro. Los campos marcados como `FK` son los que crean las conexiones, por ejemplo `SOLICITUD` tiene `idUsuario FK` e `idEvento FK`, lo que significa que cada solicitud sabe exactamente a qué usuario pertenece y a qué evento apunta, sin duplicar su información sino referenciándola. La tabla `USUARIO_ROL` es un caso especial donde ambos campos son FK, porque su único propósito es vincular usuarios con roles sin datos propios.
+
+### Flujo de Actividades 
+[Diagrama de Actividades]
+![Diagrama UML](./images/flujohappypath.png)
+### Flujo de actividades.
+[volver al índice](#flujo-de-trabajo)
+
+
+El diagrama de actividades y flujo describe el proceso o flujo de trabajo dentro del sistema, mostrando las acciones, decisiones y el orden en que se ejecutan. Representa cómo se desarrollan las actividades y las transiciones entre ellas para alcanzar un objetivo específico.
+
+### Flujo de Secuencias 
+[Diagramas de Secuencias]
+
+[volver al índice](#flujo-de-trabajo)
+
+
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant UC as UsuarioController
+    participant ES as EventoService
+    participant ER as EventoRepository
+    participant IS as InscripcionService
+    participant IR as InscripcionRepository
+    participant DR as DocumentoRepository
+    participant FR as FacturacionRepository
+    %% ======================
+    %% CONSULTA DE EVENTOS
+    %% ======================
+    U->>UC: consultarInfoEvento()
+    UC->>ES: obtenerDetallesEvento()
+    ES->>ER: buscarEventos()
+    ER-->>ES: listaEventos
+    ES-->>UC: eventos
+    UC-->>U: mostrarEventos
+    %% ==========================
+    %% VER DETALLE + VALIDAR CUPO
+    %% ==========================
+    U->>UC: obtenerDetallesEvento(idEvento)
+    UC->>ES: obtenerDetallesEvento()
+    ES->>ER: buscarEventos()
+    ER-->>ES: detalleEvento
+    ES-->>UC: detalle
+    UC-->>U: mostrarDetalle
+    U->>UC: inscribirse(idEvento)
+    UC->>ES: validarDisponibilidadCupo()
+    ES->>ER: buscarEventos()
+    ER-->>ES: cupoDisponible
+    alt Cupo disponible
+        UC->>IS: procesarRegistroInteresado()
+        IS->>IR: actualizarCupo()
+        IR-->>IS: ok
+        IS->>ER: buscarEventos()
+        ER-->>IS: eventoActualizado
+        UC-->>U: estado = "pendiente"
+        %% ======================
+        %% SUBIR DOCUMENTOS
+        %% ======================
+        U->>UC: subirDocumentos()
+        UC->>IS: procesarRegistroInteresado()
+        IS->>DR: almacenarDocs()
+        DR-->>IS: ok
+        %% ======================
+        %% VALIDACIÓN Y APROBACIÓN
+        %% ======================
+        UC->>IS: confirmarPagoYActivacion()
+        alt Datos correctos / pago confirmado
+            IS->>FR: guardarFacturacion()
+            FR-->>IS: comprobante
+            IS-->>UC: estado = "aprobado"
+            UC-->>U: enviarComprobante()
+        else Datos incorrectos
+            UC-->>U: notificarError()
+            U->>UC: subirDocumentos()
+        end
+    else Sin cupo
+        UC-->>U: mostrarError("Evento lleno")
+    end
+    %% ======================
+    %% ACCESO A CONTENIDO
+    %% ======================
+    U->>UC: accederMisEventos()
+    UC->>IS: confirmarPagoYActivacion()
+    IS-->>UC: validaciónOK
+    UC-->>U: mostrarContenido
+```
+
+ 
+### Flujo de Clases 
+
+[Diagrama de clases]  
+
+[volver al índice](#flujo-de-trabajo)
+
+
+
+```mermaid
+classDiagram
+    namespace Controllers {
+        class UsuarioController {
+            +consultarInfoEvento()
+            +subirDocumentos()
+            
+        }
+        class CapacitadorController {
+            +consultarEventoAsignado()
+            +imprimirFacturacion()
+        }
+        class AdminController {
+            +gestionarCapacitadores()
+            +crearEvento()
+            +administrarInformacion()
+        }
+    }
+    namespace Services {
+        class EventoService {
+            +obtenerDetallesEvento()
+            +validarDisponibilidadCupo()
+            +verificarFechas()
+        }
+        class InscripcionService {
+            +procesarRegistroInteresado()
+            +confirmarPagoYActivacion()
+        }
+        class FacturacionService {
+            +calcularFacturacion()
+        }
+        class CapacitadorService {
+            +asignarAgendaCapacitador()
+        }
+    }
+    namespace Repositories {
+        class EventoRepository {
+            +buscarEventos()
+            +insertarEvento()
+        }
+        class InscripcionRepository {
+            +actualizarCupo()
+        }
+        class DocumentoRepository {
+            +almacenarDocs()
+        }
+        class CapacitadorRepository {
+            +getCapacitadorID()
+        }
+        class FacturacionRepository {
+            +guardarFacturacion()
+        }
+    }
+    namespace Models {
+        class Usuario {
+            int idUsuario
+            string nombre
+            string email
+            string etapa
+        }
+        class Rol {
+            int idRol
+            string nombre //Admin | capacitador | usuario
+        }
+        class Evento {
+            int idEvento
+            string nombre
+            date fechaInicio
+            date fechaFin
+            string descripcion
+            int cupo
+        }
+        class Inscripcion {
+            int idInscripcion
+            int idUsuario
+            int idEvento
+            string estado
+        }
+        class Solicitud {
+            int idSolicitud
+            int idInscripcion
+            string estado
+        }
+        class Documento {
+            int idDocumento
+            int idSolicitud
+            string nombre
+            string tipo
+            string estado
+        }
+        class Pago {
+            int idPago
+          
+        }
+        class Capacitador {
+            int idCapacitador
+            int idUsuario
+            string informacionFiscal
+        }
+    }
+    UsuarioController --> EventoService
+    UsuarioController --> InscripcionService
+    CapacitadorController --> CapacitadorService
+    CapacitadorController --> FacturacionService
+    AdminController --> CapacitadorService
+    AdminController --> EventoService
+    EventoService --> EventoRepository
+    InscripcionService --> InscripcionRepository
+    InscripcionService --> DocumentoRepository
+    InscripcionService --> EventoRepository
+    FacturacionService --> FacturacionRepository
+    CapacitadorService --> CapacitadorRepository
+    EventoRepository ..> Evento
+    InscripcionRepository ..> Inscripcion
+    DocumentoRepository ..> Documento
+    DocumentoRepository ..> Solicitud
+    CapacitadorRepository ..> Capacitador
+    FacturacionRepository ..> Pago
+    Usuario -->  Rol
+    Usuario  -->  Inscripcion
+    Evento  -->  Inscripcion
+    Inscripcion  -->  Solicitud
+    Solicitud  -->  Documento
+    Capacitador  -->  Usuario
+```
+
+### Diagrama de clases.
+
+El diagrama de clases incluye la arquitectura del sistema, mostrando las entidades clave y su interacción dentro de una estructura modular para gestionar eventos de capacitación.
+
+
+### Explicación del modelo de clases
+Este sistema está diseñado para gestionar eventos de capacitación, permitiendo la inscripción de usuarios, la validación de requisitos, la asignación de capacitadores y el registro de pagos.
+A continuación se explica cada clase y su función dentro del sistema.
+
+- **Usuario**  :
+La clase Usuario representa a las personas que interactúan con el sistema.
+Contiene información básica como el identificador, nombre y correo electrónico. También incluye un atributo que indica la etapa del usuario, la cual puede ser interesado o participante.
+Esta clase permite realizar acciones como iniciar sesión y registrarse en el sistema.
+
+- **Rol** : 
+La clase Rol define el tipo de acceso que tiene un usuario dentro del sistema.
+Permite clasificar a los usuarios en tres categorías principales: administrador, capacitador y usuario. Esto permite controlar los permisos y funcionalidades disponibles para cada tipo de usuario.
+
+- **Evento** : 
+La clase Evento representa las capacitaciones disponibles en el sistema.
+Contiene información como el nombre del evento, fechas, descripción y el cupo máximo de participantes. Incluye una funcionalidad para verificar la disponibilidad de cupo antes de permitir nuevas inscripciones.
+
+- **Inscripción** : 
+La clase Inscripción es la entidad que relaciona a un usuario con un evento.
+Representa el proceso de registro del usuario en un evento específico y almacena el estado de la inscripción, como pendiente, aprobada o rechazada.
+
+- **Solicitud** : 
+La clase Solicitud representa la validación del proceso de inscripción.
+Se utiliza para revisar los datos del usuario y gestionar la aprobación o rechazo de la inscripción. También permite registrar formalmente la solicitud.
+
+- **Documento** : 
+La clase Documento almacena los archivos que el usuario debe subir como parte del proceso de inscripción.
+Incluye información como el tipo de documento, el nombre del archivo y su estado de validación.
+
+- **Pago** : 
+La clase Pago representa la transacción económica asociada a una inscripción.
+Se encarga de registrar el pago realizado por el usuario y permite la generación del comprobante correspondiente.
+
+- **Capacitador** : 
+La clase Capacitador representa a la persona encargada de impartir los eventos.
+Está vinculada a un usuario del sistema y contiene información adicional como datos fiscales. También permite consultar los eventos asignados.
+
+Relaciones generales del sistema:
+  - Un usuario tiene un rol asignado.
+  - Un usuario puede tener múltiples inscripciones.
+  - Un evento puede tener múltiples usuarios inscritos.
+  - Cada inscripción genera una solicitud.
+  - Una solicitud debe incluir documentos.
+  - Una inscripción debe tener un pago asociado.
+  - Un capacitador puede estar asignado a múltiples eventos.
+
+[Componentes y Dependencias](./Analisis/Requerimientos/No%20funcionales/Componentes%20o%20dependencias%20a%20considerar%20siguiendo%20los%20RNF.md)
+
+### Arquitectura
+[volver al índice](#flujo-de-trabajo)
+
+- Diagrama de Arquitectura
+```mermaid
+classDiagram
+    namespace Controllers {
+        class UsuarioController {
+            +consultarInfoEvento()
+            +subirDocumentos()
+            +realizarPago()
+        }
+        class CapacitadorController {
+            +consultarEventoAsignado()
+            +imprimirFacturacion()
+        }
+        class AdminController {
+            +gestionarCapacitadores()
+            +crearEvento()
+            +administrarInformacion()
+        }
+    }
+    namespace Services {
+        class EventoService {
+            +obtenerDetallesEvento()
+            +validarDisponibilidadCupo()
+            +verificarFechas()
+        }
+        class InscripcionService {
+            +procesarRegistroInteresado()
+            +confirmarPagoYActivacion()
+        }
+        class FacturacionService {
+            +calcularFacturacion()
+        }
+        class CapacitadorService {
+            +asignarAgendaCapacitador()
+        }
+    }
+    namespace Repositories {
+        class EventoRepository {
+            +buscarEventos()
+            +insertarEvento()
+        }
+        class InscripcionRepository {
+            +actualizarCupo()
+        }
+        class DocumentoRepository {
+            +almacenarDocs()
+        }
+        class CapacitadorRepository {
+            +getCapacitadorID()
+        }
+        class FacturacionRepository {
+            +guardarFacturacion()
+        }
+    }
+    namespace Models {
+        class Usuario {
+            int idUsuario
+            string nombre
+            string email
+            string etapa
+        }
+        class Rol {
+            int idRol
+            string nombre
+        }
+        class Evento {
+            int idEvento
+            string nombre
+            date fechaInicio
+            date fechaFin
+            string descripcion
+            int cupo
+        }
+        class Inscripcion {
+            int idInscripcion
+            int idUsuario
+            int idEvento
+            string estado
+        }
+        class Solicitud {
+            int idSolicitud
+            int idInscripcion
+            string estado
+        }
+        class Documento {
+            int idDocumento
+            int idSolicitud
+            string nombre
+            string tipo
+            string estado
+        }
+        class Pago {
+            int idPago
+            int idInscripcion
+            float monto
+            string estado
+        }
+        class Capacitador {
+            int idCapacitador
+            int idUsuario
+            string informacionFiscal
+        }
+    }
+    UsuarioController --> EventoService
+    UsuarioController --> InscripcionService
+    CapacitadorController --> CapacitadorService
+    CapacitadorController --> FacturacionService
+    AdminController --> CapacitadorService
+    AdminController --> EventoService
+    EventoService --> EventoRepository
+    InscripcionService --> InscripcionRepository
+    InscripcionService --> DocumentoRepository
+    InscripcionService --> EventoRepository
+    FacturacionService --> FacturacionRepository
+    CapacitadorService --> CapacitadorRepository
+    EventoRepository ..> Evento
+    InscripcionRepository ..> Inscripcion
+    DocumentoRepository ..> Documento
+    DocumentoRepository ..> Solicitud
+    CapacitadorRepository ..> Capacitador
+    FacturacionRepository ..> Pago
+    Usuario "1" --> "1" Rol
+    Usuario "1" --> "*" Inscripcion
+    Evento "1" --> "*" Inscripcion
+    Inscripcion "1" --> "1" Solicitud
+    Solicitud "1" --> "*" Documento
+    Capacitador "1" --> "1" Usuario
+```
+
+
 
 
