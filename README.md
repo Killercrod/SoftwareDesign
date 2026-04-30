@@ -1,4 +1,4 @@
-# Introducción
+# Introducción a la problematica 
 
 El presente proyecto consiste en el desarrollo de un sistema integral de gestión académica y comercial, orientado a optimizar la administración de eventos educativos, así como la captación y gestión de leads. La plataforma centraliza en un solo entorno la gestión de capacitaciones, cursos y diplomados, permitiendo una mejor organización de los procesos y una mayor eficiencia operativa.
 
@@ -10,24 +10,27 @@ Asimismo, la solución cubre todo el ciclo de vida del usuario, desde su registr
 
 Diseñar e implementar un sistema integral que permita gestionar de manera eficiente los eventos educativos, los usuarios y la captación de leads, automatizando los procesos de inscripción, validación y seguimiento, con el fin de mejorar la organización operativa, optimizar la conversión de prospectos y brindar una experiencia completa al usuario durante todo su ciclo de participación.
 
+
 --- 
 # Flujo de trabajo
-- Archivos de flujo  
-- Bitácoras  
-- Problemática  
+- [Metodología de trabajo](#metodologia-de-trabajo)
+- [Bitácoras de cada integrante](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)   
 - Requisitos
-  - Funcionales  
-  - No funcionales  
-- Atributos del Sistema 
-  - Actividades  
-  - Secuencias  
-  - Clases  
+  - [Funcionales](#funcionales)  
+  - [No funcionales](#no-funcionales)  
+- Atributos del Sistema
+  - [Atributos de calidad](#atributos-del-sistema)
+  - [Actividades](#flujo-de-actividades)  
+  - [Secuencias](#flujo-de-secuencias)  
+  - [Clases](#flujo-de-clases)  
   - [Arquitectura](#arquitectura)  
-  - Base de datos  
-  - Explicación del trabajo / metodología / reuniones / bitácoras  
+  - Base de datos 
 --- 
-# Problemática  
-## Requisitos 
+
+# Metodologia de trabajo 
+[volver al índice](#flujo-de-trabajo)
+  
+# Requisitos 
 
 Los requisitos es una fase crucial en el desarrollo de software, se identifican las necesidades del cliente, que el sistema se construya correctamente y cumpla con los objetivos previstos.
 
@@ -35,8 +38,11 @@ Requisitos funcionales: Defina qué debe hacer el sistema (características y op
 
 Requisitos no funcionales: Definan cómo debe funcionar el sistema (calidad, rendimiento y limitaciones).
 
-### [Funcionales](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md)
-Los requisitos funcionales especifica comportamientos observables y procesos a llevar a cabo que debe proveer el software.
+## Funcionales
+
+[volver al índice](#flujo-de-trabajo)
+
+Los [requisitos funcionales](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md) especifican comportamientos observables y procesos a llevar a cabo que debe proveer el software.
 Cada requerimiento es interpretable de una sola manera y testeables, es decir, debe con su cumplimiento en el programa.
 
 RF-01 (Gestión de Perfil)
@@ -51,7 +57,7 @@ RF-05 (Reenvío de Solicitudes)
 
 RF-06 (Acceso a Contenido)
 
-### [Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
+## [Casos de Uso](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/Funcionales/RF_CasosDeUso.md)
 Un caso de uso explica cómo los usuarios interactúan con un producto o sistema. Describe el flujo de entradas del usuario estableciendo caminos exitosos y fallidos para alcanzar los objetivos. Esto permite a los equipos de producto comprender mejor qué hace un sistema, cómo funciona y por qué ocurren los errores.
 
 CU-01: Iniciar Sesión y Gestionar Datos Actores: Usuario Descripción: El usuario deberá registrarse con su correo y contraseña además de poder entrar a la configuración de su perfil, ver y gestionar sus datos personales. Pre-Condiciones: El usuario ya debe tener una cuenta creada.
@@ -66,10 +72,12 @@ CU-05: Reenviar Solicitud. Actores: Usuario Descripción: El usuario podrá edit
 
 CU-06: Acceder a Contenido de Eventos Actores. Actores: Usuario Descripción: El usuario podrá acceder a los eventos en los que ha sido aprobado, visualizando sus detalles y recursos disponibles. Pre-Condiciones: El usuario debe haber iniciado sesión y contar con una solicitud aprobada para al menos un evento.
 
-# No funcionales
-Los RNFs especifican los estándares y cualidades que debe cumplir un sistema para funcionar de manera eficaz, centrándose en cómo Un sistema opera en lugar de Lo que Así es.
+## No funcionales
+[volver al índice](#flujo-de-trabajo)
 
-## [Refinamiento y Desglose de los RNFs](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md)
+Los [requisitos no funcionales](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Refinamiento%20y%20desglose%20de%20RNF.md) especifican los estándares y cualidades que debe cumplir un sistema para funcionar de manera eficaz, centrándose en cómo Un sistema opera en lugar de Lo que Así es.
+
+## Refinamiento y Desglose de los RNFs
 RNF-01 — Autenticación basada en tokens.
 
 El sistema deberá utilizar autenticación mediante tokens JWT para validar las sesiones de los usuarios con el propósito de controlar el acceso al sistema mediante sesiones verificables y limitar el tiempo de uso cuando no existe actividad.
@@ -106,8 +114,10 @@ RNF-09 — Identificador único de capacitador.
 
 El sistema deberá asignar un identificador numérico único a cada capacitador registrado con el propósito de permitir la identificación de cada usuario dentro del sistema y en la base de datos.
 
-## [Atributos de Calidad del Sistema]
-(https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
+# Atributos del sistema
+[volver al índice](#flujo-de-trabajo)
+
+## [Atributos de Calidad del Sistema](https://github.com/Killercrod/SoftwareDesign/blob/5f38c6001150f0166b31610001c71d2e6fccf7c6/Analisis/Requerimientos/No%20funcionales/Atributos%20de%20calidad%20del%20sistema.md)
 
 
 Los atributos de calidad del sistema describen cómo se comporta el sistema con base a los requisitos no funcionales y basados en el modelo de calidad definido por el estándar ISO/IEC 25010.
@@ -271,12 +281,19 @@ Las entidades de soporte son `CODIGO_ACCESO` para la autenticación por correo, 
 
 Cada entidad tiene un campo marcado como `PK` — por ejemplo `idUsuario`, `idEvento`, `idSolicitud` — que identifica de forma única cada registro. Los campos marcados como `FK` son los que crean las conexiones, por ejemplo `SOLICITUD` tiene `idUsuario FK` e `idEvento FK`, lo que significa que cada solicitud sabe exactamente a qué usuario pertenece y a qué evento apunta, sin duplicar su información sino referenciándola. La tabla `USUARIO_ROL` es un caso especial donde ambos campos son FK, porque su único propósito es vincular usuarios con roles sin datos propios.
 
-### Flujo de Actividades [Diagrama de Actividades]
+### Flujo de Actividades 
+[Diagrama de Actividades]
 ![Diagrama UML](./images/flujohappypath.png)
 ### Flujo de actividades.
+[volver al índice](#flujo-de-trabajo)
+
+
 El diagrama de actividades y flujo describe el proceso o flujo de trabajo dentro del sistema, mostrando las acciones, decisiones y el orden en que se ejecutan. Representa cómo se desarrollan las actividades y las transiciones entre ellas para alcanzar un objetivo específico.
 
-### Flujo de Secuencias [Diagramas de Secuencias]
+### Flujo de Secuencias 
+[Diagramas de Secuencias]
+
+[volver al índice](#flujo-de-trabajo)
 
 
 ```mermaid
@@ -351,7 +368,11 @@ sequenceDiagram
 ```
 
  
-### Flujo de Clases [Diagrama de clases]  
+### Flujo de Clases 
+
+[Diagrama de clases]  
+
+[volver al índice](#flujo-de-trabajo)
 
 
 
@@ -482,6 +503,7 @@ classDiagram
 ```
 
 ### Diagrama de clases.
+
 El diagrama de clases incluye la arquitectura del sistema, mostrando las entidades clave y su interacción dentro de una estructura modular para gestionar eventos de capacitación.
 
 
