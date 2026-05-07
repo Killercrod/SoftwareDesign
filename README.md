@@ -30,6 +30,11 @@ Diseñar e implementar un sistema integral que permita gestionar de manera efici
     - [Flujo de clases](#flujo-de-clases)
     - [Arquitectura](Analisis/Diagramas/ArquiSistema.md)
     - [Base de datos](Analisis/Diagramas/DiagramaER.md)
+    - [Quickstart de desarrollo](#quickstart-de-desarrollo)
+    - [Guia corta de PR y documentacion](#guia-corta-de-pr-y-documentacion)
+    - [Estado del proyecto](#estado-del-proyecto)
+    - [Glosario minimo](#glosario-minimo)
+
 
 **Fuente de verdad (modelo):** [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md)
 
@@ -41,8 +46,33 @@ Diseñar e implementar un sistema integral que permita gestionar de manera efici
 
 Al terminar estos pasos deberías identificar las entidades clave y saber dónde proponer cambios.
 
-## Glosario mínimo
+## Quickstart de desarrollo
 
+1. Abrir el repositorio en VS Code o en tu editor preferido y ubicar este README como punto de entrada.
+2. Leer primero los bloques de [Requisitos](#requisitos), [Atributos del sistema](#atributos-del-sistema) y el [Glosario minimo](#glosario-minimo) para entender el lenguaje del proyecto.
+3. Si vas a cambiar el modelo, actualizar primero [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md) y después alinear el README y los diagramas relacionados.
+4. Validar que los enlaces del índice apunten a la sección o documento correcto antes de compartir el cambio.
+5. Si tocas documentación técnica, revisar que no haya duplicados ni definiciones distintas para la misma entidad.
+
+## Guia corta de PR y documentacion
+
+- La fuente de verdad del modelo es [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md).
+- Si cambia una relación o entidad, actualizar primero el diagrama canónico y luego las referencias en README y diagramas secundarios.
+- No duplicar explicaciones largas de arquitectura o base de datos en varios archivos; enlazar al documento canónico cuando sea posible.
+- Mantener el glosario alineado con los nombres usados en el modelo y en los requerimientos.
+- En cambios de documentación, revisar que los títulos del índice sigan coincidiendo con los encabezados reales.
+
+## Estado del proyecto
+
+- Terminado: índice navegable, onboarding breve, glosario mínimo ampliado y sincronización básica entre README y el modelo de datos.
+- En revisión: semántica de `Solicitud` y `Pago`, y la consistencia de los enlaces y nombres entre diagramas.
+- Falta: definir migración/DDL, ejemplos de consultas y limpieza de documentos desfasados o duplicados.
+
+## Glosario minimo
+
+- `Usuario`: persona que interactúa con el sistema; puede registrarse, inscribirse y consultar su información.
+- `Evento`: oferta académica o actividad publicada en la plataforma.
+- `Capacitador`: usuario con rol académico o de instrucción, asociado a los eventos o contenidos que imparte.
 - `Inscripción`: entidad que representa la intención/registro de un `Usuario` en un `Evento`.
 - `Solicitud`: documento/registro asociado a una `Inscripción` utilizado para validación y recepción de comprobantes/documentos.
 - `Pago`: transacción financiera; opcionalmente referencia una `Solicitud` mediante `idSolicitud` (nullable). Las búsquedas por usuario/evento se obtienen mediante JOINs sobre `SOLICITUD`.
