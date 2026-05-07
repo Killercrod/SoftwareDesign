@@ -51,6 +51,7 @@ class Documento {
 
 class Pago {
   int idPago
+  int idSolicitud?    // opcional: referencia a Solicitud cuando aplica
   +imprimirComprobante()
 }
 
@@ -67,7 +68,7 @@ Usuario --> Inscripcion
 Evento --> Inscripcion
 Inscripcion --> Solicitud
 Solicitud --> Documento
-Inscripcion --> Pago
+Solicitud --> Pago
 
 Evento --> Capacitador
 ```

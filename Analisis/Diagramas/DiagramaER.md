@@ -67,7 +67,7 @@ erDiagram
 
     PAGO {
         int idPago PK
-        int idSolicitud FK
+        int idSolicitud FK  // nullable: pagos pueden existir sin solicitud
     }
 
     CAPACITADOR {
@@ -85,6 +85,7 @@ erDiagram
     DOCUMENTO_REQUERIDO ||--o{ DOCUMENTO : define
     SOLICITUD ||--o{ DOCUMENTO : incluye
     SOLICITUD ||--o{ PAGO : genera
-    EVENTO ||--o{ PAGO : recibe
+    # Nota: la relación entre pago y usuario/evento es indirecta vía SOLICITUD.
+    # No se modelan FKs directas de usuario/evento en PAGO para evitar redundancia.
     USUARIO ||--|| CAPACITADOR : es
 ```

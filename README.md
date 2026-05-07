@@ -246,7 +246,7 @@ erDiagram
 
     PAGO {
         int idPago PK
-        int idSolicitud FK
+        int idSolicitud FK  // nullable: pagos pueden existir sin solicitud
     }
 
     CAPACITADOR {
@@ -255,8 +255,8 @@ erDiagram
         string informacionFiscal
     }
 
-    USUARIO ||--o{ PAGO : genera
-    EVENTO ||--o{ SOLICITUD : recibe
+    SOLICITUD ||--o{ PAGO : genera
+    # Nota: la relación entre pago y usuario/evento es indirecta vía SOLICITUD.
     USUARIO ||--o{ USUARIO_ROL : asignado_a
     ROL ||--o{ USUARIO_ROL : contiene
     USUARIO ||--o{ CODIGO_ACCESO : tiene
@@ -275,7 +275,7 @@ El diagrama representa la estructura de datos del sistema de gestión de eventos
 
 `USUARIO` es el núcleo del sistema, se conecta con casi todo. Un usuario puede tener múltiples solicitudes, códigos de acceso y un rol asignado. `EVENTO` es la otra entidad central, ya que agrupa las solicitudes, los documentos requeridos, los recursos y los capacitadores. `SOLICITUD` actúa como puente entre un usuario y un evento, y de ella se desprenden los documentos cargados y el pago. `CAPACITADOR` extiende a `USUARIO`, es decir, todo capacitador es también un usuario del sistema pero con información fiscal adicional y eventos asignados.
 
-Las entidades de soporte son `CODIGO_ACCESO` para la autenticación por correo, `DOCUMENTO_REQUERIDO` para definir qué documentos exige cada evento, `DOCUMENTO` para los archivos que sube el usuario, `PAGO` para el estado financiero de cada solicitud, `RECURSO` para los materiales del evento y `USUARIO_ROL` como tabla intermedia que gestiona los roles.
+Las entidades de soporte son `CODIGO_ACCESO` para la autenticación por correo, `DOCUMENTO_REQUERIDO` para definir qué documentos exige cada evento, `DOCUMENTO` para los archivos que sube el usuario y `USUARIO_ROL` como tabla intermedia que gestiona los roles. `PAGO` registra transacciones y opcionalmente referencia una `SOLICITUD` mediante `idSolicitud` (nullable).
 
 ### Claves PK y FK
 
