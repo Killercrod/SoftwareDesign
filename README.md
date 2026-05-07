@@ -23,8 +23,24 @@ Diseñar e implementar un sistema integral que permita gestionar de manera efici
   - [Actividades](#flujo-de-actividades)  
   - [Secuencias](#flujo-de-secuencias)  
   - [Clases](#flujo-de-clases)  
-  - [Arquitectura](#arquitectura)  
-  - Base de datos 
+    - [Arquitectura](#arquitectura)  
+    - Base de datos 
+
+**Fuente de verdad (modelo):** [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md)
+
+## Onboarding (primeros 5 minutos)
+
+1. Leer los requisitos funcionales: [Desglose de Issues (RF)](Analisis/Requerimientos/Funcionales/Desglose%20de%20Issues%20(RF).md).
+2. Revisar el Diagrama Entidad-Relación canónico: [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md) — fuente de verdad para el modelo de datos.
+3. Revisar el diagrama de clases para entender relaciones de alto nivel: [Analisis/Diagramas/diagramaClases.md](Analisis/Diagramas/diagramaClases.md).
+
+Al terminar estos pasos deberías identificar las entidades clave y saber dónde proponer cambios.
+
+## Glosario mínimo
+
+- `Inscripción`: entidad que representa la intención/registro de un `Usuario` en un `Evento`.
+- `Solicitud`: documento/registro asociado a una `Inscripción` utilizado para validación y recepción de comprobantes/documentos.
+- `Pago`: transacción financiera; opcionalmente referencia una `Solicitud` mediante `idSolicitud` (nullable). Las búsquedas por usuario/evento se obtienen mediante JOINs sobre `SOLICITUD`.
 --- 
 
 # Metodologia de trabajo 
