@@ -13,18 +13,23 @@ Diseñar e implementar un sistema integral que permita gestionar de manera efici
 
 --- 
 # Flujo de trabajo
+- [Introducción](#introducción-a-la-problematica)
+- [Objetivo](#objetivo)
 - [Metodología de trabajo](#metodologia-de-trabajo)
-- [Bitácoras de cada integrante](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)   
-- Requisitos
-  - [Funcionales](#funcionales)  
-  - [No funcionales](#no-funcionales)  
-- Atributos del Sistema
-  - [Atributos de calidad](#atributos-del-sistema)
-  - [Actividades](#flujo-de-actividades)  
-  - [Secuencias](#flujo-de-secuencias)  
-  - [Clases](#flujo-de-clases)  
-    - [Arquitectura](#arquitectura)  
-    - Base de datos 
+- [Bitácoras de cada integrante](https://github.com/Killercrod/SoftwareDesign/tree/main/Bit%C3%A1coras)
+- [Requisitos](#requisitos)
+    - [Funcionales](#funcionales)
+    - [Casos de uso](#casos-de-uso)
+    - [No funcionales](#no-funcionales)
+    - [Refinamiento y desglose de los RNFs](#refinamiento-y-desglose-de-los-rnfs)
+- [Atributos del sistema](#atributos-del-sistema)
+    - [Atributos de calidad](#atributos-de-calidad-del-sistema)
+    - [Diagrama entidad-relación](Analisis/Diagramas/DiagramaER.md)
+    - [Flujo de actividades](#flujo-de-actividades)
+    - [Flujo de secuencias](#flujo-de-secuencias)
+    - [Flujo de clases](#flujo-de-clases)
+    - [Arquitectura](Analisis/Diagramas/ArquiSistema.md)
+    - [Base de datos](Analisis/Diagramas/DiagramaER.md)
 
 **Fuente de verdad (modelo):** [Analisis/Diagramas/DiagramaER.md](Analisis/Diagramas/DiagramaER.md)
 
