@@ -18,10 +18,13 @@
 
 - Realice el documento para la estrategia de gestion de bases de datos 
 
-- colabore/realice el diagrama de clases del modulo de usuarios conforme a la arquitectura en capas
+- colabore en el diagrama de clases del modulo de usuarios conforme a la arquitectura en capas
 
-- realice la explicacion del diagrama de clases
+- colabore la explicacion del diagrama de clases
 
+- realice el diagrama de entidad-relación
+
+- realice la explicacion del diagrama de entidad-relacion
 
 
 
