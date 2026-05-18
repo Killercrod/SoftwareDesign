@@ -49,5 +49,10 @@ Mi participación estuvo orientada a la documentación funcional y de diseño de
 - Mejora en organización y proceso de revisión.
 - Alineación de documentos con la lógica del sistema.
 
+## Participación en equipo
+- Trabajé junto con Ivan en el estándar de documentación y en la revisión de requisitos funcionales.
+- Propuse y coordiné cambios en el proceso de revisión (pasar a 3 reviewers) para agilizar integraciones.
+- Colaboré con el equipo en la actualización de diagramas y en la definición del flujo de procesos.
+
 ## Cierre
 Esta bitácora resume mi participación en el análisis funcional, la definición del diseño y la coordinación documental del proyecto.

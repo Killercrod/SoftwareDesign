@@ -33,6 +33,11 @@ Después de la primera etapa de documentación, seguí trabajando en la reorgani
 - Ajustes de formato y contenido en el README para RF y RNF.
 - Mejora de los casos de uso con precondiciones más claras.
 - Consolidación de documentación funcional y no funcional.
+ 
+## Participación en equipo
+- Colaboré con Cesar en la reorganización de la estructura del repositorio.
+- Trabajé junto con Tello en el estándar de documentación y en la revisión de casos de uso.
+- Organicé y publiqué diagramas (inscripción, arquitectura) que fueron utilizados por el equipo.
 
 ## Cierre
 Esta bitácora resume mi aporte al bloque de requisitos funcionales y a la organización inicial del trabajo documental.

@@ -24,5 +24,11 @@ Durante el arranque del proyecto me encargué principalmente de la organización
 - Supervisión de issues y revisiones de cambios.
 - Definición de la base documental inicial del proyecto.
 
+## Participación en equipo
+- Coordiné la asignación de issues y milestones para todo el equipo.
+- Organicé y lideré revisiones por pull request, asesorando a los autores en correcciones.
+- Trabajé junto con Ivan en la reorganización de carpetas para mejorar la legibilidad.
+- Facilitè la metodología de trabajo para alinear las tareas semanales del equipo.
+
 ## Cierre
 Esta bitácora resume mi participación como responsable de la organización inicial, seguimiento de milestones y control documental del proyecto.

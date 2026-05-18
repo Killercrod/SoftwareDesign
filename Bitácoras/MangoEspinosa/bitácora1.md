@@ -35,5 +35,10 @@ Mi aporte estuvo centrado en enriquecer el glosario y la documentación base del
 - Apoyo en la documentación base.
 - Mantenimiento de referencias para facilitar el trabajo del equipo.
 
+## Participación en equipo
+- Proporcioné el glosario y definiciones que el equipo adoptó como estándar.
+- Realicé actualizaciones al README que ayudaron a mantener coherencia documental.
+- Apoyé en la normalización de términos usados en issues y casos de uso.
+
 ## Cierre
 Esta bitácora resume mi participación en la estandarización del lenguaje y la documentación de apoyo del proyecto.

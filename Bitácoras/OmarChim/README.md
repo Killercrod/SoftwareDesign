@@ -36,9 +36,12 @@ En la etapa posterior al cierre inicial del mes seguí trabajando en documentaci
 - 2026-04-24: Agregué documentación del diagrama ER en DiagramaER.md.
 
 ## Aporte posterior
-- Ajuste de requisitos relacionados con solicitudes e inscripciones.
-- Mejor documentación del diagrama entidad-relación.
-- Refuerzo del README con información del modelo de datos.
+
+## Participación en equipo
+- Colaboré con Jorge en la definición de criterios de modificabilidad y en la estrategia de base de datos.
+- Publiqué y mejoré el diagrama entidad-relación y documentación asociada, que sirvieron de referencia para el equipo.
+- Añadí endpoints y archivos de apoyo que fueron integrados por el equipo en la fase de análisis.
+
 
 ## Cierre
 Esta bitácora resume mi participación en la etapa de análisis y documentación técnica del sistema.
