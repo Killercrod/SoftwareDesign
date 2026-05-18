@@ -30,10 +30,10 @@ Mi trabajo se concentró en el análisis, refinamiento y documentación de los r
 
 ## Actualización posterior al 31/03/2026
 En la etapa posterior al cierre inicial del mes seguí trabajando en documentación de base de datos y definición de requerimientos. Los commits más representativos de este periodo fueron:
-- 2026-04-27: Update requirements for requests and enrollments.
-- 2026-04-24: Enhance README with Entity-Relationship diagram details.
-- 2026-04-24: Include Entity-Relationship diagram in README.
-- 2026-04-24: Add ER diagram documentation in DiagramaER.md.
+- 2026-04-27: Actualicé los requerimientos para solicitudes e inscripciones.
+- 2026-04-24: Mejoré el README con detalles del diagrama entidad-relación.
+- 2026-04-24: Incluí el diagrama entidad-relación en el README.
+- 2026-04-24: Agregué documentación del diagrama ER en DiagramaER.md.
 
 ## Aporte posterior
 - Ajuste de requisitos relacionados con solicitudes e inscripciones.
