@@ -1,12 +1,28 @@
-# Bitácora 06/03/2026
-- Cree el area de projects, estableci milestones para poder trabajar cada semana con issues relacionados a cada etapa del weekly.
-- Designe los issues a cada integrante y prepare la informacion para cada issue
-- Cree la metodologia de trabajo y puse el readme principal asi como designar en que carpeta ira cada cosa
-- Revise cada issue por medio de pull request y se rechzaron y se volvieron a realizar algunos documentos ya determinados por mis compañeros
+# Bitácora individual - Cesar Rodriguez
 
-# Bitácora 18/03/2026
-- Cree las milestones de a semana y tambien les designe los issues a mis compañeros y ellos pusieron los issues que se necesitaban para esta weekly
-- Cambie y corregi algunas partes del readme principal para que asi pudieramos trabajar con un poco mas de orden
-- Cree el diagrama acerca de cada modulo y las cosas que hara cada usuario
-Acomode las carpetas de nuevo para mejorar la legibilidad esto los hice con mi compañero ivan
-- Revise cada issue por medio de pull request y se rechzaron y se volvieron a realizar algunos documentos ya determinados por mis compañeros
+## Resumen general
+Durante el arranque del proyecto me encargué principalmente de la organización del repositorio, la definición de la metodología de trabajo y la coordinación de los issues por semanalidad. También realicé ajustes en la estructura documental del proyecto y revisé cambios por medio de pull requests para mantener orden y consistencia.
+
+## Actividades realizadas
+
+### 06/03/2026
+- Creé el área de projects y establecí milestones para trabajar por semana con issues relacionados a cada etapa del weekly.
+- Designé los issues a cada integrante y preparé la información necesaria para cada uno.
+- Definí la metodología de trabajo y organicé el README principal, además de asignar en qué carpeta iría cada documento.
+- Revisé varios issues por medio de pull requests; algunos fueron rechazados y se rehacieron documentos determinados por mis compañeros.
+
+### 18/03/2026
+- Creé las milestones semanales y asigné los issues correspondientes a mis compañeros.
+- Corregí y ajusté partes del README principal para trabajar con mayor orden.
+- Elaboré el diagrama general sobre cada módulo y las acciones que realizaría cada usuario.
+- Reorganicé carpetas junto con Ivan para mejorar la legibilidad del repositorio.
+- Volví a revisar issues por medio de pull requests y validé documentos que se actualizaron tras la retroalimentación.
+
+## Aporte principal
+- Coordinación del trabajo semanal.
+- Organización de documentación y estructura del repositorio.
+- Supervisión de issues y revisiones de cambios.
+- Definición de la base documental inicial del proyecto.
+
+## Cierre
+Esta bitácora resume mi participación como responsable de la organización inicial, seguimiento de milestones y control documental del proyecto.
