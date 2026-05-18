@@ -28,5 +28,17 @@ Mi trabajo se concentró en el análisis, refinamiento y documentación de los r
 - Definición de criterios de calidad y mantenibilidad.
 - Apoyo en la estrategia de datos del proyecto.
 
+## Actualización posterior al 31/03/2026
+En la etapa posterior al cierre inicial del mes seguí trabajando en documentación de base de datos y definición de requerimientos. Los commits más representativos de este periodo fueron:
+- 2026-04-27: Update requirements for requests and enrollments.
+- 2026-04-24: Enhance README with Entity-Relationship diagram details.
+- 2026-04-24: Include Entity-Relationship diagram in README.
+- 2026-04-24: Add ER diagram documentation in DiagramaER.md.
+
+## Aporte posterior
+- Ajuste de requisitos relacionados con solicitudes e inscripciones.
+- Mejor documentación del diagrama entidad-relación.
+- Refuerzo del README con información del modelo de datos.
+
 ## Cierre
 Esta bitácora resume mi participación en la etapa de análisis y documentación técnica del sistema.

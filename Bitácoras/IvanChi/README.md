@@ -19,5 +19,20 @@ Mi participación se centró en la definición y documentación de los requisito
 - Desglose de trabajo en issues para facilitar seguimiento.
 - Claridad y trazabilidad en la etapa de análisis.
 
+## Actualización posterior al 31/03/2026
+Después de la primera etapa de documentación, seguí trabajando en la reorganización y consolidación de la documentación del proyecto. Los commits más representativos de este periodo fueron:
+- 2026-04-28: Add architecture diagram using Mermaid syntax.
+- 2026-04-27: Update README.md.
+- 2026-04-27: Correct formatting of RNF entries in README.
+- 2026-04-27: Add non-functional requirements to README.
+- 2026-04-24: Enhance use cases with pre-conditions.
+- 2026-04-24: Enhance README with requirements and use cases.
+
+## Aporte posterior
+- Integración de un diagrama de arquitectura en Mermaid.
+- Ajustes de formato y contenido en README para RF y RNF.
+- Mejora de casos de uso con precondiciones más claras.
+- Consolidación de documentación funcional y no funcional.
+
 ## Cierre
 Esta bitácora resume mi aporte al bloque de requisitos funcionales y a la organización inicial del trabajo documental.
