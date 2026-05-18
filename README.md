@@ -297,7 +297,7 @@ erDiagram
 
     PAGO {
         int idPago PK
-        int idSolicitud FK  // nullable: pagos pueden existir sin solicitud
+        int idSolicitud FK  
     }
 
     CAPACITADOR {
