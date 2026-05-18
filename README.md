@@ -307,7 +307,7 @@ erDiagram
     }
 
     SOLICITUD ||--o{ PAGO : genera
-    }USUARIO ||--o{ USUARIO_ROL : asignado_a
+    USUARIO ||--o{ USUARIO_ROL : asignado_a
     ROL ||--o{ USUARIO_ROL : contiene
     USUARIO ||--o{ CODIGO_ACCESO : tiene
     EVENTO ||--o{ DOCUMENTO_REQUERIDO : contiene
