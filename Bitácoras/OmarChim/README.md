@@ -41,6 +41,7 @@ En la etapa posterior al cierre inicial del mes seguí trabajando en documentaci
 - Colaboré con Jorge en la definición de criterios de modificabilidad y en la estrategia de base de datos.
 - Publiqué y mejoré el diagrama entidad-relación y documentación asociada, que sirvieron de referencia para el equipo.
 - Añadí endpoints y archivos de apoyo que fueron integrados por el equipo en la fase de análisis.
+- Colabore en la creacion del diagraa de clases relacionado con la arquitectura en capas
 
 
 ## Cierre
