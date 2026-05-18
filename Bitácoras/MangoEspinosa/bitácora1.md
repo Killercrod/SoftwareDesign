@@ -42,3 +42,10 @@ Mi aporte estuvo centrado en enriquecer el glosario y la documentación base del
 
 ## Cierre
 Esta bitácora resume mi participación en la estandarización del lenguaje y la documentación de apoyo del proyecto.
+
+## Commits seleccionados (evidencia)
+- 2026-03-10 | ed235bb | Create bitácora1.md
+- 2026-03-10 | 1f2c532 | Creates Glosario.md
+- 2026-03-10 | 3483c16 | añade imágenes para glosario
+
+*Nota: commits relevantes extraídos del historial del repositorio.*

@@ -22,3 +22,10 @@ Mi trabajo se enfocó en los requisitos no funcionales y en la documentación as
 
 ## Cierre
 Esta bitácora resume mi participación en la documentación de calidad y en la definición de bases para la mantenibilidad del sistema.
+
+## Commits seleccionados (evidencia)
+- 2026-03-26 | 5c2eb77 | Add maintainability and modifiability guidelines (Guia_Mantenibilidad.md)
+- 2026-03-19 | 17a3083 | Update README.md (ajustes y reorganización)
+- 2026-03-19 | bbb0ffb | Format Bitácora entries in Markdown style
+
+*Nota: commits listados según el historial y criterios de significancia.*

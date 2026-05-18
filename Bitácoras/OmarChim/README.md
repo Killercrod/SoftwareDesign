@@ -45,3 +45,12 @@ En la etapa posterior al cierre inicial del mes seguí trabajando en documentaci
 
 ## Cierre
 Esta bitácora resume mi participación en la etapa de análisis y documentación técnica del sistema.
+
+## Commits seleccionados (evidencia)
+- 2026-04-24 | 1773e8b | Add ER diagram documentation in DiagramaER.md
+- 2026-04-24 | b74d797 | Include Entity-Relationship diagram in README
+- 2026-04-23 | 5148395 | Add files via upload (BD/Definicion, BD/Estrategia)
+- 2026-03-25 | 48e2181 | CSR para modulo mis eventos dentro la BD
+- 2026-03-31 | 3f57cd4 | Estrategia de gestion de BD
+
+*Nota: listado generado desde el historial de Git con foco en cambios significativos y archivos añadidos.*

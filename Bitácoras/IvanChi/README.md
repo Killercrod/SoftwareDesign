@@ -41,3 +41,13 @@ Después de la primera etapa de documentación, seguí trabajando en la reorgani
 
 ## Cierre
 Esta bitácora resume mi aporte al bloque de requisitos funcionales y a la organización inicial del trabajo documental.
+
+## Commits seleccionados (evidencia)
+- 2026-04-28 | ec7c422 | Add architecture diagram using Mermaid syntax
+- 2026-04-27 | 030bac3 | Update README.md
+- 2026-04-27 | 8ed06ca | Add non-functional requirements to README
+- 2026-04-24 | c0c6e4f | Enhance use cases with pre-conditions
+- 2026-03-31 | 901d59d | diagrama de usuarios y capacitadores
+- 2026-03-23 | 6d6fec9 | Create Diagramas
+
+*Nota: commits seleccionados desde el historial por añadir archivos o cambios significativos.*

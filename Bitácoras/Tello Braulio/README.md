@@ -56,3 +56,11 @@ Mi participación estuvo orientada a la documentación funcional y de diseño de
 
 ## Cierre
 Esta bitácora resume mi participación en el análisis funcional, la definición del diseño y la coordinación documental del proyecto.
+
+## Commits seleccionados (evidencia)
+- 2026-04-28 | 2a1bfc0 | Add sequence diagram for event consultation process
+- 2026-04-27 | 057b369 | Add sequence diagram for user event interactions
+- 2026-04-27 | 16316fb | Add updated class diagram documentation
+- 2026-03-26 | b884789 | Subir diagramas Caso de Uso
+
+*Nota: commits seleccionados de acuerdo con los criterios de añadir archivos o cambios significativos.*

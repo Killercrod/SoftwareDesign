@@ -32,3 +32,15 @@ Durante el arranque del proyecto me encargué principalmente de la organización
 
 ## Cierre
 Esta bitácora resume mi participación como responsable de la organización inicial, seguimiento de milestones y control documental del proyecto.
+
+## Commits seleccionados (evidencia)
+- 2026-05-18 | 0f5fe5f | Docs: add monthly breakdown to TrabajoMensual Readme
+- 2026-05-18 | 88a8b98 | Docs: add team participation sections to individual bitacoras
+- 2026-05-18 | 430f5b9 | Docs: translate updated bitacoras to Spanish
+- 2026-05-18 | a1975e0 | Docs: update bitacoras with later commits
+- 2026-05-07 | 3f9ad22 | Docs: add development quickstart and project status
+- 2026-03-24 | 8a6c1ec | Add metrics workflow and finalize script + docs
+- 2026-03-23 | f73e0fe | Create python metricas.py
+- 2026-03-23 | 4aa433e | Create Como hacer un issue.md
+
+*Nota: listado generado desde el historial de Git, filtrando commits que añadieron archivos o tuvieron cambios significativos.*
