@@ -291,7 +291,7 @@ erDiagram
 
     PAGO {
         int idPago PK
-        int idSolicitud FK  // nullable: pagos pueden existir sin solicitud
+        int idSolicitud FK  
     }
 
     CAPACITADOR {
@@ -301,7 +301,6 @@ erDiagram
     }
 
     SOLICITUD ||--o{ PAGO : genera
-    # Nota: la relación entre pago y usuario/evento es indirecta vía SOLICITUD.
     USUARIO ||--o{ USUARIO_ROL : asignado_a
     ROL ||--o{ USUARIO_ROL : contiene
     USUARIO ||--o{ CODIGO_ACCESO : tiene
