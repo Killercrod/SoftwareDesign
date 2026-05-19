@@ -62,12 +62,6 @@ Al terminar estos pasos deberías identificar las entidades clave y saber dónde
 - Mantener el glosario alineado con los nombres usados en el modelo y en los requerimientos.
 - En cambios de documentación, revisar que los títulos del índice sigan coincidiendo con los encabezados reales.
 
-## Estado del proyecto
-
-- Terminado: índice navegable, onboarding breve, glosario mínimo ampliado y sincronización básica entre README y el modelo de datos.
-- En revisión: semántica de `Solicitud` y `Pago`, y la consistencia de los enlaces y nombres entre diagramas.
-- Falta: definir migración/DDL, ejemplos de consultas y limpieza de documentos desfasados o duplicados.
-
 ## Glosario minimo
 
 - `Usuario`: persona que interactúa con el sistema; puede registrarse, inscribirse y consultar su información.
